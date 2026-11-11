@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Global Deal Hunter by StarLeap Tech LLC — verified free credits, free trials and sign-up bonuses for cloud, AI tools, banking and crypto, checked against official sources.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Global Deal Hunter — A StarLeap Tech LLC Product</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg-soft:#f4f6f8;--surface:#fff;--text:#0c1a2e;--muted:#526173;--faint:#7c8a9c;--line:#dde3e8;--line-strong:#c9d2da;--navy:#0b1d3a;--navy-2:#12294d;--accent:#0e7c6b;--accent-strong:#0a6356;--accent-soft:#e3f2ee;--radius:14px}
+*{box-sizing:border-box}body{margin:0;font-family:"Public Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16.5px}
+h1,h2,h3{font-family:"Archivo","Public Sans",sans-serif;line-height:1.15;letter-spacing:-.015em;margin:0}
+p{margin:0}a{color:var(--accent-strong)}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:15px}
+.brand-name{font-family:"Archivo",sans-serif;font-weight:700;font-size:17px}
+.brand-name span{color:var(--accent-strong)}
+.brand-sub{display:block;font-size:11.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap}
+.main-nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:8px}
+.main-nav a:hover{background:var(--bg-soft);color:var(--text)}
+.main-nav a.active{color:var(--accent-strong)}
+.hero{background:var(--navy);color:#eef3f8;padding:64px 0 56px}
+.hero .kicker{color:#7fd8c6;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,52px);margin:14px 0 16px}
+.hero p{color:#a9bccd;max-width:720px;font-size:18px}
+.stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.stat{background:var(--navy-2);border:1px solid #22385e;border-radius:12px;padding:14px 18px;min-width:170px}
+.stat b{display:block;font-family:"Archivo",sans-serif;font-size:24px;color:#fff}
+.stat span{color:#a9bccd;font-size:13.5px}
+.section{padding:56px 0}
+.section.soft{background:var(--bg-soft)}
+.eyebrow{color:var(--accent-strong);font-weight:700;letter-spacing:.07em;text-transform:uppercase;font-size:12.5px}
+.section h2{font-size:30px;margin:10px 0 12px}
+.lede{color:var(--muted);max-width:760px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:19px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-strong);width:fit-content}
+.chip.warn{background:#fdf0e2;color:#8a5a12}
+.value{font-family:"Archivo",sans-serif;font-size:26px;font-weight:800;color:var(--navy)}
+.card p{color:var(--muted);font-size:15px}
+.meta{font-size:13.5px;color:var(--faint)}
+.btn{display:inline-block;margin-top:auto;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:11px 18px;border-radius:9px;width:fit-content}
+.btn:hover{background:var(--navy-2)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px}
+.rule b{display:block;margin-bottom:6px}
+.rule p{color:var(--muted);font-size:14.5px}
+.cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.cats span{border:1px solid var(--line-strong);border-radius:999px;padding:8px 16px;font-weight:600;font-size:14.5px}
+.sub-form{margin-top:24px;display:grid;gap:12px;max-width:560px}
+.sub-form label{font-weight:600;font-size:14px;display:grid;gap:6px}
+.sub-form input,.sub-form select{font:inherit;padding:11px 13px;border:1px solid var(--line-strong);border-radius:9px;background:#fff;color:var(--text)}
+.sub-form button{font:inherit;font-weight:700;background:var(--navy);color:#fff;border:0;border-radius:9px;padding:12px 22px;cursor:pointer;justify-self:start}
+.note{color:var(--faint);font-size:14px;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap header-inner">
+<a class="brand" href="/"><span class="brand-mark">SL</span><span><span class="brand-name">StarLeap <span>Tech LLC</span></span><span class="brand-sub">Software · Cloud · AI</span></span></a>
+<nav class="main-nav"><a href="/#about">About</a><a href="/#services">Services</a><a href="/deals.html" class="active">Deal Hunter</a><a href="/#contact">Contact Us</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<p class="kicker">A StarLeap Tech LLC product</p>
+<h1>Global Deal Hunter</h1>
+<p>Verified free credits, free trials and sign-up bonuses — for cloud platforms, AI tools, banking and crypto. Every offer is checked against its official source before it is listed, and every listing states who can actually claim it.</p>
+<div class="stats">
+<div class="stat"><b>74</b><span>active offers tracked</span></div>
+<div class="stat"><b>$5,914+</b><span>confirmed value listed</span></div>
+<div class="stat"><b>Every 4 hours</b><span>patrol re-checks &amp; discovers</span></div>
+<div class="stat"><b>Nov 11, 2026</b><span>board last updated</span></div>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<p class="eyebrow">Featured · Verified</p>
+<h2>Checked offers worth your time</h2>
+<p class="lede">Hand-picked from the board. “Verified” means the offer and its terms were confirmed on the provider’s official page. Read the eligibility line before you start — it is the part most deal sites hide.</p>
+<div class="grid">
+
+<article class="card">
+<span class="chip">Free trial</span>
+<div class="value">$300</div>
+<h3>Google Cloud Free Trial</h3>
+<p>$300 in new-user credit for 90 days, plus an always-free tier that includes an e2-micro VM and 20+ products.</p>
+<p class="meta">Region: Global · Card required for identity verification · Trial resources stop if you do not upgrade</p>
+<a class="btn" href="https://cloud.google.com/free/docs/gcp-free-tier" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+<article class="card">
+<span class="chip">Free trial + free tier</span>
+<div class="value">$300</div>
+<h3>Oracle Cloud Free Tier</h3>
+<p>$300 trial credit for 30 days, plus always-free Arm VMs (2 OCPU / 12 GB RAM), two micro instances and 200 GB storage.</p>
+<p class="meta">Region: Global (trial credit varies by country) · Card verification required · Idle free resources may be reclaimed</p>
+<a class="btn" href="https://www.oracle.com/cloud/free/faq/" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+<article class="card">
+<span class="chip">Eligibility-based</span>
+<div class="value">≈ $1,200</div>
+<h3>Claude for Open Source</h3>
+<p>Six free months of Claude Ultra (Max 20x) for qualifying open-source maintainers and core contributors, granted by Anthropic.</p>
+<p class="meta">Region: Global · Application reviewed — maintainer criteria apply · Limited seats, may close anytime</p>
+<a class="btn" href="https://claude.com/open-source-max" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+<article class="card">
+<span class="chip">Free trial</span>
+<div class="value">$100</div>
+<h3>Akamai Cloud (Linode) Credit</h3>
+<p>$100 in cloud credit for new users, valid 60 days across most compute, storage and load-balancer plans (GPU excluded).</p>
+<p class="meta">Region: Global · Payment method required · Delete resources before expiry to avoid charges</p>
+<a class="btn" href="https://www.linode.com/lp/free-credit-100-5000/" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+<article class="card">
+<span class="chip">Free trial</span>
+<div class="value">$100</div>
+<h3>Kamatera 30-Day Free Trial</h3>
+<p>One cloud server up to $100 in configuration, free for 30 days with 1 TB traffic, across 25 data centers.</p>
+<p class="meta">Region: Global · Card verification required · Servers keep billing after day 30 unless terminated</p>
+<a class="btn" href="https://www.kamatera.com/applications/n8n/" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+<article class="card">
+<span class="chip">Truly free · Students</span>
+<div class="value">≈ $120/yr</div>
+<h3>GitHub Copilot Student</h3>
+<p>Free GitHub Copilot for verified students, plus the Student Developer Pack with dozens of partner benefits.</p>
+<p class="meta">Region: Global · Student status verified via GitHub Education · Ends when student status lapses</p>
+<a class="btn" href="https://education.github.com/benefits" target="_blank" rel="noopener">View official offer</a>
+</article>
+
+</div>
+
+<div class="card" style="margin-top:18px">
+<span class="chip warn">US only · Read conditions</span>
+<h3>US bank account bonuses we track</h3>
+<p>Chase Total Checking — <b>$400</b> (ends Jan 27, 2027) · Wells Fargo Everyday Checking — <b>$325</b> (ends Jan 13, 2027) · Citizens — up to <b>$600</b> (ends Nov 15, 2026). All require US residency and qualifying payroll direct deposits. If that is not you, skip them — we list them so nobody wastes a trip.</p>
+<p class="meta">Full terms on each bank’s official offer page.</p>
+</div>
+</div></section>
+
+<section class="section soft"><div class="wrap">
+<p class="eyebrow">How we list</p>
+<h2>Our honesty rules</h2>
+<div class="rules">
+<div class="rule"><b>Official links only</b><p>Every “verified” listing links to the provider’s own page. No official page, no verified badge.</p></div>
+<div class="rule"><b>Types labeled plainly</b><p>Truly free, free trial, deposit required, trading volume required, invite required — labeled as what they are, never blurred.</p></div>
+<div class="rule"><b>Eligibility up front</b><p>Residency, deposit, direct-deposit and verification requirements are stated before you click, not after you sign up.</p></div>
+<div class="rule"><b>Checked every 4 hours</b><p>An automated patrol discovers new offers, re-verifies active ones and archives expired ones.</p></div>
+</div>
+<div class="cats"><span>AI Tools</span><span>Cloud &amp; VPS</span><span>Crypto</span><span>Banks &amp; Cards</span><span>Software Deals</span><span>Ending Soon</span></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<p class="eyebrow">Stay in the loop</p>
+<h2>Get the high-value digest</h2>
+<p class="lede">Subscribe and we will send you the offers that are actually claimable — new verified deals worth $50 or more, and high-value offers about to expire. No spam, no recycled lists.</p>
+<form class="sub-form" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="6b6eba7f-71c0-428f-9d7f-10eba1dee89a">
+<input type="hidden" name="subject" value="Deal Hunter subscription">
+<input type="checkbox" name="botcheck" style="display:none">
+<label>Your email<input type="email" name="email" required></label>
+<label>What are you hunting?
+<select name="interest">
+<option>Cloud &amp; VPS credits</option>
+<option>AI tool deals</option>
+<option>Bank &amp; card bonuses</option>
+<option>Crypto rewards</option>
+<option>Everything</option>
+</select></label>
+<button type="submit">Subscribe</button>
+</form>
+<p class="note">Prefer chat? Reach us on <a href="https://wa.me/12082107415" target="_blank" rel="noopener">WhatsApp</a> — the digest goes out there too.</p>
+</div></section>
+
+<footer><div class="wrap">
+<div><b>Global Deal Hunter</b> is a product of StarLeap Tech LLC.<br>Offers change and expire; always confirm terms on the official page before acting. Bonuses may be taxable.</div>
+<div>© 2026 StarLeap Tech LLC. All rights reserved.<br>131 Railroad St, Pritchett, CO 81064, USA · <a href="/">starleaptech.dpdns.org</a></div>
+</div></footer>
+</body>
+</html>
