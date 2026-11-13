@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>出海基建清单 | StarLeap Tech LLC</title>
+<meta name="description" content="从注册美国公司、域名邮箱、收款电话，到 Meta 企业验证、广告开户和创业额度申请：一张我们亲手走完的出海基建清单，每一步都标注实测经验和踩过的坑。中英双语。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://www.starleaptech.dpdns.org/guide.html">
+<meta property="og:title" content="出海基建清单 | StarLeap Tech LLC">
+<meta property="og:description" content="注册公司、域名邮箱、收款、平台验证、广告开户、创业额度：亲手走完的出海全流程清单，含真实踩坑记录。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.starleaptech.dpdns.org/guide.html">
+<meta property="og:image" content="https://www.starleaptech.dpdns.org/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg-soft:#f4f6f8;--surface:#fff;--text:#0c1a2e;--muted:#526173;--faint:#7c8a9c;--line:#dde3e8;--line-strong:#c9d2da;--navy:#0b1d3a;--navy-2:#12294d;--accent:#0e7c6b;--accent-strong:#0a6356;--accent-soft:#e3f2ee;--warn-bg:#fdf3e3;--warn:#8a5a12;--radius:14px}
+*{box-sizing:border-box}body{margin:0;font-family:"Public Sans","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:16.5px}
+h1,h2,h3{font-family:"Archivo","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.25;letter-spacing:-.01em;margin:0}
+p{margin:0}a{color:var(--accent-strong)}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:15px}
+.brand-name{font-family:"Archivo",sans-serif;font-weight:700;font-size:17px}
+.brand-name span{color:var(--accent-strong)}
+.brand-sub{display:block;font-size:11.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:8px}
+.main-nav a:hover{background:var(--bg-soft);color:var(--text)}
+.main-nav a.active{color:var(--accent-strong)}
+.lang-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;margin-left:8px}
+.lang-switch button{font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang-switch button.active{background:var(--navy);color:#fff}
+.hero{background:var(--navy);color:#eef3f8;padding:56px 0 48px}
+.hero .kicker{color:#7fd8c6;font-weight:700;letter-spacing:.08em;font-size:13px}
+.hero h1{color:#fff;font-size:clamp(32px,5vw,46px);margin:12px 0 14px}
+.hero p{color:#a9bccd;max-width:760px;font-size:17.5px}
+.hero .edition{margin-top:22px;display:inline-block;background:var(--navy-2);border:1px solid #22385e;border-radius:999px;padding:8px 18px;color:#dbe7f3;font-size:14.5px;font-weight:600}
+.section{padding:44px 0 8px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 28px;margin-top:20px}
+.step-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.step-no{font-family:"Archivo",sans-serif;font-weight:800;font-size:14px;color:#fff;background:var(--accent);border-radius:999px;padding:4px 12px}
+.step h2{font-size:24px}
+.step .sub{color:var(--muted);margin-top:6px;max-width:820px}
+.checks{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start;background:var(--bg-soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:15.5px}
+.checks li::before{content:"✓";font-weight:800;color:var(--accent-strong);flex:none}
+.note{margin-top:14px;border-radius:10px;padding:13px 16px;font-size:15px;background:var(--warn-bg);color:var(--warn)}
+.note b{font-weight:700}
+.note.good{background:var(--accent-soft);color:var(--accent-strong)}
+.cta{margin:44px 0 56px;background:var(--navy);border-radius:var(--radius);padding:34px 30px;color:#eef3f8}
+.cta h2{color:#fff;font-size:27px;margin-bottom:10px}
+.cta p{color:#a9bccd;max-width:720px}
+.cta a.btn{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:10px}
+.site-footer{border-top:1px solid var(--line);padding:26px 0 34px;color:var(--faint);font-size:14px}
+.site-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">SL</span>
+      <span><span class="brand-name">StarLeap <span>Tech LLC</span></span>
+      <span class="brand-sub">Software · Cloud · AI Tools</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/" data-i18n="nav_home">首页</a>
+      <a href="/tech.html" data-i18n="nav_tech">每日科技讯息</a>
+      <a href="/deals.html" data-i18n="nav_deals">全球羊毛情报中心</a>
+      <a href="/guide.html" class="active" data-i18n="nav_guide">出海基建清单</a>
+      <a href="/#contact" data-i18n="nav_contact">联系</a>
+      <span class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en">EN</button><button type="button" data-lang-btn="zh" class="active">中文</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker" data-i18n="hero_kicker">STARLEAP 实测手册</p>
+    <h1 data-i18n="hero_title">出海基建清单</h1>
+    <p data-i18n="hero_lede">从注册一家美国公司，到域名邮箱、收款电话、平台验证、广告开户，再到把创业额度领到手：这张清单上的每一步，我们都亲手走过一遍。哪一步有坑、坑在哪，都标出来了。</p>
+    <span class="edition" data-i18n="hero_badge">基于 StarLeap Tech LLC 的真实搭建过程 · 持续更新</span>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 1</span><h2 data-i18n="s1_title">公司主体：先有一家正经公司</h2></div>
+      <p class="sub" data-i18n="s1_sub">后面所有的银行、平台、额度申请，第一句话都是问你的公司主体。先把这一步做扎实。</p>
+      <ul class="checks">
+        <li data-i18n="s1_i1">注册 LLC：选州、注册代理、Articles of Organization，拿到 Good Standing（良好存续）状态</li>
+        <li data-i18n="s1_i2">申请 EIN（联邦税号）：开银行户、报税、过平台验证都要用</li>
+        <li data-i18n="s1_i3">留好全套文件：组织章程、成员决议、Good Standing 证明，平台验证时随时要调</li>
+        <li data-i18n="s1_i4">记下年度合规日历：州年报（科罗拉多 Periodic Report，$10/年）别漏交</li>
+      </ul>
+      <p class="note" data-i18n="s1_note"><b>实测提醒：</b>外国人持有的单人 LLC，每年 4 月 15 日前必须报 Form 1120 + 5472，哪怕零收入也要报，漏报罚款很重。这条不是吓唬，是我们每年要做的功课。</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 2</span><h2 data-i18n="s2_title">域名、官网与邮箱：0 成本起步</h2></div>
+      <p class="sub" data-i18n="s2_sub">公司的「门脸」可以先不花钱：域名、静态官网、域名邮箱，我们整套是 0 成本跑起来的。</p>
+      <ul class="checks">
+        <li data-i18n="s2_i1">拿一个公司域名：免费域名平台可起步（注意续期窗口，提前记到日历里）</li>
+        <li data-i18n="s2_i2">官网用 GitHub Pages 托管：开启 HTTPS，中英双语，带联系表单和流量统计</li>
+        <li data-i18n="s2_i3">配域名邮箱：founder@、hello@ 这类地址，用转发服务转到常用邮箱即可</li>
+        <li data-i18n="s2_i4">官网联系表单实测一遍：提交、通知、回复链路都要通</li>
+      </ul>
+      <p class="note good" data-i18n="s2_note"><b>为什么重要：</b>域名邮箱不是面子工程。后面的创业额度申请，官方明确要用公司域名邮箱，我们吃过用免费邮箱被拒的亏（见 Step 6）。</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 3</span><h2 data-i18n="s3_title">收款与电话：坑最多的一步</h2></div>
+      <p class="sub" data-i18n="s3_sub">银行开户和电话号码，看着简单，实际上是整条链里最容易卡死的地方。</p>
+      <ul class="checks">
+        <li data-i18n="s3_i1">美国商业银行账户：Mercury、Relay 这类线上银行是非居民常用选项，但开户要护照</li>
+        <li data-i18n="s3_i2">没有护照时，先把其他步骤推完，别在银行这一步无限期卡住</li>
+        <li data-i18n="s3_i3">公司电话要能开出「公司名 + 号码」同框的账单或发票文件</li>
+        <li data-i18n="s3_i4">官网和平台资料里的电话保持一致，后面验证时会对账</li>
+      </ul>
+      <p class="note" data-i18n="s3_note"><b>踩过的坑：</b>接码平台的虚拟号不能用于平台文件验证。Meta 企业验证要求提交同时印有公司名和电话号码的文件，虚拟号没有账单、不是长期独占，这条路走不通。正规做法是用实名电话，或者办公司名义的网络电话，拿带公司名和号码的发票去验。</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 4</span><h2 data-i18n="s4_title">平台验证：让 Meta 们认你</h2></div>
+      <p class="sub" data-i18n="s4_sub">广告平台不认识你的公司，就不给你投放和高级功能。验证这一步，本质是把 Step 1–3 的材料对齐。</p>
+      <ul class="checks">
+        <li data-i18n="s4_i1">Meta 网域验证：把验证标签加到官网首页，公网生效后再去面板点「验证网域」</li>
+        <li data-i18n="s4_i2">企业验证材料：公司注册文件 + 带公司名和电话的文件，缺一不可</li>
+        <li data-i18n="s4_i3">网站装上流量统计（如 Cloudflare Web Analytics），运营数据从第一天开始攒</li>
+        <li data-i18n="s4_i4">各平台填写的公司名、地址、电话，与注册文件逐字一致</li>
+      </ul>
+      <p class="note" data-i18n="s4_note"><b>实测提醒：</b>选公司时别选错同名公司。各州都有重名的 LLC，面板里认准自己的注册州和注册地址再提交。</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 5</span><h2 data-i18n="s5_title">广告开户与投放：开始获客</h2></div>
+      <p class="sub" data-i18n="s5_sub">基建的终点是获客。广告户开好、追踪装好、表单跑通，生意才算转起来。</p>
+      <ul class="checks">
+        <li data-i18n="s5_i1">Meta / TikTok 广告户开户：企业资质、支付方式、时区与币种一次设对</li>
+        <li data-i18n="s5_i2">装像素与转化追踪：投放前先验证事件能正常回传</li>
+        <li data-i18n="s5_i3">跑线索就用即时表单：联系信息预填 + 关键筛选题（比如月采购量），先筛再聊</li>
+        <li data-i18n="s5_i4">硬性条件写在明面上：起订量、服务范围这些，在文案和表单里 upfront 写明，省双方时间</li>
+      </ul>
+      <p class="note" data-i18n="s5_note"><b>踩过的坑：</b>Meta 即时表单必填隐私政策 URL，官网没挂隐私页，表单就发布不出去。先把隐私政策页挂到官网，再建表单。另外，广告账户报「缺电话号码」时，验的往往是管理员个人号的手机号，要管理员本人去加。</p>
+    </div>
+
+    <div class="step">
+      <div class="step-head"><span class="step-no">STEP 6</span><h2 data-i18n="s6_title">创业额度：免费的钱先领了</h2></div>
+      <p class="sub" data-i18n="s6_sub">大厂给初创公司的云额度，是真实能省下的成本。自筹公司能申的那一档，先从这里开始。</p>
+      <ul class="checks">
+        <li data-i18n="s6_i1">AWS Activate：自筹档 $1,000 起，申请表信息必须与 AWS 账户信息一致</li>
+        <li data-i18n="s6_i2">Google for Startups：Start 档 $2,000，先开 GCP 结算账号再交申请</li>
+        <li data-i18n="s6_i3">Microsoft for Startups：自筹档最高 $5,000，先有 Microsoft 账号再进 Founders Hub</li>
+        <li data-i18n="s6_i4">Cloudflare for Startups：自筹档 $10,000，网页申请不通时直接邮件官方要替代通道</li>
+      </ul>
+      <p class="note" data-i18n="s6_note"><b>实测教训，三条：</b>一，申请邮箱必须与账户邮箱、公司域名对齐，我们的第一份 AWS 申请就死在邮箱不一致上；二，微软账号创建最后一步可能被反滥用系统拦截，本人在自己设备上建号更稳；三，Google 的付款验证比别家严，同一张卡在别家能绑、在 Google 可能过不去，备一张备用卡。全部 178+ 条已核实额度与优惠，在我们的<a href="/deals.html">全球羊毛情报中心</a>持续更新。</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 data-i18n="cta_title">清单看完了，卡在哪一步？</h2>
+    <p data-i18n="cta_text">广告户开户、Meta / TikTok 投放、独立站搭建、创业额度申请，这些我们都在给自己和客户实操。卡住的那一步，交给走过一遍的人更快。</p>
+    <a class="btn" href="/#contact" data-i18n="cta_btn">联系我们</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="foot_left">© 2026 StarLeap Tech LLC · Colorado, USA</span>
+    <span data-i18n="foot_right">Built lean, shipped for real.</span>
+  </div>
+</footer>
+
+<script>
+var I18N = { en: {
+nav_home: "Home", nav_tech: "Daily Tech Briefing", nav_deals: "Global Deal Hunter", nav_guide: "Global Launch Checklist", nav_contact: "Contact",
+hero_kicker: "THE STARLEAP FIELD GUIDE", hero_title: "Global Launch Checklist",
+hero_lede: "From registering a US company to domain email, payments and phone, platform verification, ad accounts, and finally claiming startup credits: every step on this list is one we have walked ourselves. Where the traps are, we marked them.",
+hero_badge: "Based on StarLeap Tech LLC's real setup · Updated continuously",
+s1_title: "Company entity: start with a real company",
+s1_sub: "Every bank, platform, and credit program asks about your company entity first. Get this step solid.",
+s1_i1: "Register the LLC: pick a state and registered agent, file Articles of Organization, and reach Good Standing status",
+s1_i2: "Apply for an EIN (federal tax ID): needed for bank accounts, taxes, and platform verification",
+s1_i3: "Keep the full file set handy: articles, member resolutions, Good Standing certificate; platforms will ask for them without warning",
+s1_i4: "Calendar the annual compliance: state periodic report (Colorado: $10/year) must not lapse",
+s1_note: "<b>Field note:</b> A single-member LLC owned by a foreigner must file Form 1120 + 5472 every year before April 15, even with zero revenue. The late-filing penalties are severe. This is not a scare tactic; it is on our own annual to-do list.",
+s2_title: "Domain, website, and email: start at zero cost",
+s2_sub: "Your company's storefront can start free: domain, a static website, and domain email. Our whole stack runs at zero cost.",
+s2_i1: "Get a company domain: free domain platforms work to start (mind the renewal window and calendar it)",
+s2_i2: "Host the website on GitHub Pages: HTTPS on, bilingual, with a contact form and analytics",
+s2_i3: "Set up domain email: founder@, hello@ style addresses, forwarded to your everyday inbox",
+s2_i4: "Test the contact form end to end: submit, notification, and reply path all working",
+s2_note: "<b>Why it matters:</b> Domain email is not vanity. Startup credit programs explicitly require a company-domain email, and we have had an application rejected over a free email address (see Step 6).",
+s3_title: "Payments and phone: where most people get stuck",
+s3_sub: "Bank accounts and phone numbers look simple. In practice this is where the whole chain most often jams.",
+s3_i1: "US business banking: online banks like Mercury and Relay are common picks for non-residents, but onboarding requires a passport",
+s3_i2: "No passport yet? Push the other steps forward instead of stalling indefinitely at the bank",
+s3_i3: "Your company phone must be able to produce a bill or invoice showing company name and number together",
+s3_i4: "Keep the phone number consistent across your website and platform profiles; verification cross-checks them",
+s3_note: "<b>The trap we hit:</b> Virtual numbers from SMS-receiving services cannot pass document verification. Meta's business verification requires a document showing the company name and the phone number together; a virtual number has no bill and is not exclusively yours, so that path simply fails. Use a phone in your real name, or a business VoIP line under the company name whose invoice carries both.",
+s4_title: "Platform verification: make Meta recognize you",
+s4_sub: "If the ad platforms do not recognize your company, you get no ads and no advanced features. Verification is really about aligning the materials from Steps 1-3.",
+s4_i1: "Meta domain verification: add the verification tag to your homepage, confirm it is live publicly, then click Verify Domain in the panel",
+s4_i2: "Business verification documents: company registration file plus a document with company name and phone; both are required",
+s4_i3: "Install web analytics (such as Cloudflare Web Analytics) and accumulate operating data from day one",
+s4_i4: "Company name, address, and phone entered on every platform must match the registration documents word for word",
+s4_note: "<b>Field note:</b> Do not pick the wrong namesake company. Many states have LLCs with identical names; check the state and registered address before you submit.",
+s5_title: "Ad accounts and campaigns: start acquiring customers",
+s5_sub: "The point of the infrastructure is customers. Accounts opened, tracking installed, forms converting: that is when the business starts turning.",
+s5_i1: "Open Meta / TikTok ad accounts: business documents, payment method, timezone, and currency set correctly the first time",
+s5_i2: "Install pixel and conversion tracking: verify events fire correctly before spending",
+s5_i3: "For lead generation, use instant forms: prefilled contact fields plus key qualifier questions (such as monthly volume) to filter before you talk",
+s5_i4: "Put hard conditions up front: minimum order quantities and service scope stated plainly in the copy and the form save everyone time",
+s5_note: "<b>The trap we hit:</b> Meta instant forms require a privacy policy URL. No privacy page on your website, no published form. Put the privacy policy page up first, then build the form. Also, when an ad account complains about a missing phone number, it usually means the admin's personal number, which only the admin can add.",
+s6_title: "Startup credits: claim the free money first",
+s6_sub: "Cloud credits from the big platforms are real cost savings. If you are bootstrapped, start with the tier you can actually get.",
+s6_i1: "AWS Activate: from $1,000 for bootstrapped founders; application details must match the AWS account information",
+s6_i2: "Google for Startups: $2,000 on the Start tier; open the GCP billing account before filing",
+s6_i3: "Microsoft for Startups: up to $5,000 bootstrapped; you need a Microsoft account before Founders Hub",
+s6_i4: "Cloudflare for Startups: $10,000 bootstrapped tier; if the web form fails, email the team for an alternate route",
+s6_note: "<b>Three lessons we paid for:</b> One, the application email must align with the account email and company domain; our first AWS application died on exactly that mismatch. Two, Microsoft's account creation can be blocked by anti-abuse systems at the final step; creating the account on your own device works better. Three, Google's payment verification is stricter than the others; a card that binds elsewhere may fail there, so keep a backup card ready. All 178+ verified credits and deals live in our <a href=\"/deals.html\">Global Deal Hunter</a>, updated continuously.",
+cta_title: "Read the list. Stuck on a step?",
+cta_text: "Ad account opening, Meta / TikTok campaigns, independent websites, and startup credit applications: we run all of these for ourselves and for clients. The step you are stuck on goes faster with someone who has already walked it.",
+cta_btn: "Contact us",
+foot_left: "© 2026 StarLeap Tech LLC · Colorado, USA", foot_right: "Built lean, shipped for real."
+} };
+function applyLang(lang) {
+  if (lang === "zh") { location.reload(); return; }
+  var dict = I18N[lang]; if (!dict) return;
+  document.documentElement.lang = "en";
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n");
+    if (dict[k]) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+    b.classList.toggle("active", b.getAttribute("data-lang-btn") === lang);
+  });
+  try { localStorage.setItem("sl-lang", lang); } catch (e) {}
+}
+document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+  b.addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
+});
+try {
+  if (localStorage.getItem("sl-lang") === "en") applyLang("en");
+} catch (e) {}
+</script>
+</body>
+</html>
