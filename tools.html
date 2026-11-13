@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 工具精选榜 | StarLeap Tech LLC</title>
+<meta name="description" content="StarLeap 生产环境真在用的 AI 工具精选：视频生成、图像、配音与数字人、大模型、研究效率五大类，全部带实测评分、价格档和免费版信息，另设创新工坊：公开我们的 AI 工作流配方与量化产出。中英双语。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://www.starleaptech.dpdns.org/tools.html">
+<meta property="og:title" content="AI 工具精选榜 | StarLeap Tech LLC">
+<meta property="og:description" content="只收生产环境真在用的 AI 工具：实测评分、价格档、免费版，一张表看完；创新工坊公开工作流配方。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.starleaptech.dpdns.org/tools.html">
+<meta property="og:image" content="https://www.starleaptech.dpdns.org/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg-soft:#f4f6f8;--surface:#fff;--text:#0c1a2e;--muted:#526173;--faint:#7c8a9c;--line:#dde3e8;--line-strong:#c9d2da;--navy:#0b1d3a;--navy-2:#12294d;--accent:#0e7c6b;--accent-strong:#0a6356;--accent-soft:#e3f2ee;--radius:14px}
+*{box-sizing:border-box}body{margin:0;font-family:"Public Sans","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:16.5px}
+h1,h2,h3{font-family:"Archivo","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.25;letter-spacing:-.01em;margin:0}
+p{margin:0}a{color:var(--accent-strong)}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand-mark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:15px}
+.brand-name{font-family:"Archivo",sans-serif;font-weight:700;font-size:17px}
+.brand-name span{color:var(--accent-strong)}
+.brand-sub{display:block;font-size:11.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:8px}
+.main-nav a:hover{background:var(--bg-soft);color:var(--text)}
+.main-nav a.active{color:var(--accent-strong)}
+.lang-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;margin-left:8px}
+.lang-switch button{font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang-switch button.active{background:var(--navy);color:#fff}
+.hero{background:var(--navy);color:#eef3f8;padding:56px 0 48px}
+.hero .kicker{color:#7fd8c6;font-weight:700;letter-spacing:.08em;font-size:13px}
+.hero h1{color:#fff;font-size:clamp(32px,5vw,46px);margin:12px 0 14px}
+.hero p{color:#a9bccd;max-width:780px;font-size:17.5px}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.hero .stat{background:var(--navy-2);border:1px solid #22385e;border-radius:12px;padding:10px 18px;color:#dbe7f3;font-size:14.5px}
+.hero .stat b{color:#fff;font-size:19px;font-family:"Archivo",sans-serif}
+.section{padding:46px 0 6px}
+.eyebrow{color:var(--accent-strong);font-weight:700;letter-spacing:.07em;font-size:12.5px}
+.section h2{font-size:28px;margin:8px 0 6px}
+.lede{color:var(--muted);max-width:800px}
+.tablebox{margin-top:22px;border:1px solid var(--line);border-radius:var(--radius);overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:15px}
+th{background:var(--navy);color:#fff;text-align:left;padding:12px 14px;font-weight:700;white-space:nowrap}
+td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:var(--bg-soft)}
+td.name{font-weight:700;white-space:nowrap}
+.score{font-family:"Archivo",sans-serif;font-weight:800;color:var(--accent-strong)}
+.free{color:var(--accent-strong);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:9px}
+.card h3{font-size:19px}
+.card p{color:var(--muted);font-size:15px}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent-strong);width:fit-content}
+.bar{height:8px;background:var(--bg-soft);border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.card .meta{font-size:13.5px;color:var(--faint);margin-top:auto}
+.lab{background:var(--navy);color:#eef3f8;border-radius:var(--radius);padding:36px 32px;margin-top:26px}
+.lab h2{color:#fff}
+.lab .lede{color:#a9bccd}
+.recipe{background:var(--navy-2);border:1px solid #22385e;border-radius:12px;padding:22px;margin-top:18px}
+.recipe h3{color:#fff;font-size:20px}
+.recipe .flow{color:#7fd8c6;font-weight:600;font-size:15px;margin:8px 0}
+.recipe p{color:#a9bccd;font-size:15px}
+.recipe .nums{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.recipe .num{background:#0b1d3a;border:1px solid #22385e;border-radius:10px;padding:8px 14px;font-size:14px;color:#dbe7f3}
+.recipe .num b{color:#fff;font-family:"Archivo",sans-serif;font-size:17px}
+.foot-note{color:var(--faint);font-size:13.5px;margin-top:16px;max-width:860px}
+.cta{margin:44px 0 56px;background:var(--navy);border-radius:var(--radius);padding:34px 30px;color:#eef3f8}
+.cta h2{color:#fff;font-size:27px;margin-bottom:10px}
+.cta p{color:#a9bccd;max-width:720px}
+.cta a.btn{display:inline-block;margin-top:18px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:10px}
+.site-footer{border-top:1px solid var(--line);padding:26px 0 34px;color:var(--faint);font-size:14px}
+.site-footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">SL</span>
+      <span><span class="brand-name">StarLeap <span>Tech LLC</span></span>
+      <span class="brand-sub">Software · Cloud · AI Tools</span></span>
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="/" data-i18n="nav_home">首页</a>
+      <a href="/tech.html" data-i18n="nav_tech">每日科技讯息</a>
+      <a href="/deals.html" data-i18n="nav_deals">全球羊毛情报中心</a>
+      <a href="/guide.html" data-i18n="nav_guide">出海基建清单</a>
+      <a href="/tools.html" class="active" data-i18n="nav_tools">AI 工具精选</a>
+      <a href="/#contact" data-i18n="nav_contact">联系</a>
+      <span class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en">EN</button><button type="button" data-lang-btn="zh" class="active">中文</button>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker" data-i18n="hero_kicker">STARLEAP 实测精选</p>
+    <h1 data-i18n="hero_title">AI 工具精选榜</h1>
+    <p data-i18n="hero_lede">导航站都在搬运清单，我们只收自己生产环境里真在用的。每款工具给实测评分、价格档和免费版信息；页面下半部分是「创新工坊」，公开我们把工具拼成生产线的配方和量化产出。</p>
+    <div class="stats">
+      <span class="stat"><b>14</b> <span data-i18n="stat1">款在用工具</span></span>
+      <span class="stat"><b>5</b> <span data-i18n="stat2">大类别</span></span>
+      <span class="stat"><b>3</b> <span data-i18n="stat3">条公开工作流配方</span></span>
+      <span class="stat"><b>6+</b> <span data-i18n="stat4">款有免费版可白嫖起步</span></span>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="section">
+    <p class="eyebrow" data-i18n="t_eyebrow">量化总表</p>
+    <h2 data-i18n="t_title">一张表看完：评分、价格、免费版</h2>
+    <p class="lede" data-i18n="t_lede">综合评分是我们按效果、速度、性价比、上手难度四项打的实测分（满分 10）。价格为付费版起步档约数，以各官网为准（2026 年 11 月）。</p>
+    <div class="tablebox">
+      <table>
+        <thead><tr>
+          <th data-i18n="th_tool">工具</th><th data-i18n="th_cat">类别</th><th data-i18n="th_score">实测分</th><th data-i18n="th_best">最适合</th><th data-i18n="th_price">付费起步</th><th data-i18n="th_free">免费版</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="name">Seedance 2.0（即梦）</td><td data-i18n="c_video">视频生成</td><td class="score">9.2</td><td data-i18n="b_seedance">广告短片、剧情向视频</td><td>≈ ¥69/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">可灵 Kling</td><td data-i18n="c_video">视频生成</td><td class="score">8.8</td><td data-i18n="b_kling">长镜头、运动表现</td><td>≈ $10/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Runway</td><td data-i18n="c_video">视频生成</td><td class="score">8.5</td><td data-i18n="b_runway">专业剪辑工作流衔接</td><td>≈ $15/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Nano Banana（Gemini 图像）</td><td data-i18n="c_image">图像</td><td class="score">9.0</td><td data-i18n="b_banana">改图、角色一致性</td><td data-i18n="p_api">按 API 量计费</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Midjourney</td><td data-i18n="c_image">图像</td><td class="score">8.9</td><td data-i18n="b_mj">质感海报、风格图</td><td>≈ $10/月起</td><td data-i18n="no">无</td></tr>
+          <tr><td class="name">ElevenLabs</td><td data-i18n="c_voice">配音</td><td class="score">9.1</td><td data-i18n="b_el">英文广告配音</td><td>≈ $5/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Wav2Lip（开源）</td><td data-i18n="c_lip">对口型</td><td class="score">8.4</td><td data-i18n="b_w2l">真人口播逐字对口型</td><td data-i18n="p_free">免费（自备算力）</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Piper TTS（开源）</td><td data-i18n="c_voice">配音</td><td class="score">8.0</td><td data-i18n="b_piper">多语种离线配音</td><td data-i18n="p_free">免费（自备算力）</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Claude</td><td data-i18n="c_llm">大模型</td><td class="score">9.4</td><td data-i18n="b_claude">长文写作、智能体管线</td><td>≈ $20/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">ChatGPT</td><td data-i18n="c_llm">大模型</td><td class="score">9.3</td><td data-i18n="b_gpt">全能日常、图像生成</td><td>≈ $20/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Gemini</td><td data-i18n="c_llm">大模型</td><td class="score">9.2</td><td data-i18n="b_gemini">多模态、长上下文</td><td>≈ $20/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">DeepSeek</td><td data-i18n="c_llm">大模型</td><td class="score">8.9</td><td data-i18n="b_ds">高性价比 API 调用</td><td data-i18n="p_api2">API 按量，极低</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">Perplexity</td><td data-i18n="c_research">研究</td><td class="score">8.7</td><td data-i18n="b_pplx">带来源的快速调研</td><td>≈ $20/月起</td><td class="free" data-i18n="yes">有</td></tr>
+          <tr><td class="name">NotebookLM</td><td data-i18n="c_research">研究</td><td class="score">8.6</td><td data-i18n="b_nblm">资料消化、音频概览</td><td data-i18n="p_free2">免费版够用</td><td class="free" data-i18n="yes">有</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="foot-note" data-i18n="t_note">评分口径：效果 40% + 速度 20% + 性价比 25% + 上手难度 15%，由 StarLeap 在真实交付项目中评测，不接厂商赞助。价格变动频繁，订阅前请以官网为准。</p>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow" data-i18n="c_eyebrow">分类精选</p>
+    <h2 data-i18n="c_title">按活选工具，别按名气选</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="chip" data-i18n="c_video">视频生成</span>
+        <h3>Seedance 2.0（即梦）</h3>
+        <div class="bar"><i style="width:92%"></i></div>
+        <p data-i18n="v_seedance">我们的广告片主力。导演感最强：分镜、运镜、口型和原生音频一条龙，国产短剧和广告的完成度目前没对手。</p>
+        <p class="meta"><span class="score">9.2</span> · ≈ ¥69/月起 · <span data-i18n="hasfree">有免费版</span></p>
+      </div>
+      <div class="card">
+        <span class="chip" data-i18n="c_image">图像</span>
+        <h3>Nano Banana（Gemini 图像）</h3>
+        <div class="bar"><i style="width:90%"></i></div>
+        <p data-i18n="v_banana">改图和角色一致性是杀手锏：一张参考图锁住人物，换场景换服装不变脸，做系列内容效率翻倍。</p>
+        <p class="meta"><span class="score">9.0</span> · API 按量 · <span data-i18n="hasfree">有免费版</span></p>
+      </div>
+      <div class="card">
+        <span class="chip" data-i18n="c_voice">配音</span>
+        <h3>ElevenLabs</h3>
+        <div class="bar"><i style="width:91%"></i></div>
+        <p data-i18n="v_el">英文配音的天花板，情绪和停顿最像真人。我们的海外广告英文声线基本都从这里出。</p>
+        <p class="meta"><span class="score">9.1</span> · ≈ $5/月起 · <span data-i18n="hasfree">有免费版</span></p>
+      </div>
+      <div class="card">
+        <span class="chip" data-i18n="c_lip">对口型</span>
+        <h3>Wav2Lip（开源）</h3>
+        <div class="bar"><i style="width:84%"></i></div>
+        <p data-i18n="v_w2l">真人口播的逐字对口型就靠它。开源免费，自己部署；长视频要分段渲染，这是我们踩出来的经验。</p>
+        <p class="meta"><span class="score">8.4</span> · <span data-i18n="opensrc">开源免费</span></p>
+      </div>
+      <div class="card">
+        <span class="chip" data-i18n="c_llm">大模型</span>
+        <h3>Claude</h3>
+        <div class="bar"><i style="width:94%"></i></div>
+        <p data-i18n="v_claude">长文、脚本和智能体管线的中枢。写作最稳，长任务不跑偏，我们的内容生产线就是围绕它搭的。</p>
+        <p class="meta"><span class="score">9.4</span> · ≈ $20/月起 · <span data-i18n="hasfree">有免费版</span></p>
+      </div>
+      <div class="card">
+        <span class="chip" data-i18n="c_llm">大模型</span>
+        <h3>DeepSeek</h3>
+        <div class="bar"><i style="width:89%"></i></div>
+        <p data-i18n="v_ds">性价比之王。重复性、批量型的小任务交给它的 API，成本低到可以忽略，省下的预算留给贵模型打硬仗。</p>
+        <p class="meta"><span class="score">8.9</span> · API 按量 · <span data-i18n="hasfree">有免费版</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="eyebrow" data-i18n="lab_eyebrow">创新板块</p>
+    <h2 data-i18n="lab_title">创新工坊：工具不值钱，配方值钱</h2>
+    <div class="lab">
+      <h2 data-i18n="lab_h">我们的三条公开配方</h2>
+      <p class="lede" data-i18n="lab_lede">单个工具谁都能买，把工具拼成带质检的流水线，才是拉开差距的地方。下面三条是我们每天在跑的生产配方，链路和产出数据全部公开。</p>
+
+      <div class="recipe">
+        <h3 data-i18n="r1_t">配方一：AI 广告片流水线</h3>
+        <p class="flow" data-i18n="r1_f">脚本 → Seedance 分镜生成 → ElevenLabs / Piper 配音 → 逐帧质检（每镜早中晚 3 帧）→ 静音检测 → 成片</p>
+        <p data-i18n="r1_d">关键不在生成，在质检：每条片子交付前逐镜抽帧验穿帮、全片跑静音检测，旁白必须贯穿全程。这是我们被返工教训换来的标准动作。</p>
+        <div class="nums">
+          <span class="num"><b>30+</b> <span data-i18n="r1_n1">条已交付广告片</span></span>
+          <span class="num"><b>3</b> <span data-i18n="r1_n2">种语言交付（英 / 土 / 中）</span></span>
+          <span class="num"><b>100%</b> <span data-i18n="r1_n3">交付前质检覆盖</span></span>
+        </div>
+      </div>
+
+      <div class="recipe">
+        <h3 data-i18n="r2_t">配方二：真人口播对口型流水线</h3>
+        <p class="flow" data-i18n="r2_f">真人照片 → TTS 配音 → Wav2Lip 分段对口型（约 12 秒一段）→ concat 拼接 → 字幕烧录 → PTS 连续性校验</p>
+        <p data-i18n="r2_d">长视频整片渲染会爆内存，分段才是正解；拼接必须用滤镜重拼并逐帧验时间戳，否则画面会冻住错位。</p>
+        <div class="nums">
+          <span class="num"><b>12s</b> <span data-i18n="r2_n1">每段渲染长度</span></span>
+          <span class="num"><b>4</b> <span data-i18n="r2_n2">条口播成片已交付</span></span>
+          <span class="num"><b>53–68s</b> <span data-i18n="r2_n3">单条成片时长</span></span>
+        </div>
+      </div>
+
+      <div class="recipe">
+        <h3 data-i18n="r3_t">配方三：内容情报双流水线</h3>
+        <p class="flow" data-i18n="r3_f">定时巡检（每 4 小时）→ 官方域名核实 → 分级入库 → 双语发布；每日科技简讯：真实新闻源 → 逐条标来源 → 中英双版上线</p>
+        <p data-i18n="r3_d">羊毛情报和科技简讯共用一套「先核实、再发布」的骨架：新收录先标待核实，只有官方链接能升已验证。内容产品的信任就是这样攒的。</p>
+        <div class="nums">
+          <span class="num"><b>178+</b> <span data-i18n="r3_n1">条在榜情报</span></span>
+          <span class="num"><b>$341,582+</b> <span data-i18n="r3_n2">已核实总价值</span></span>
+          <span class="num"><b>4h</b> <span data-i18n="r3_n3">巡检间隔</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 data-i18n="cta_title">工具都齐了，缺的是把它们拼起来的人？</h2>
+    <p data-i18n="cta_text">AI 广告片、口播视频、独立站和内容管线，我们都在实操交付。想把这套配方用到你的产品上，聊聊。</p>
+    <a class="btn" href="/#contact" data-i18n="cta_btn">联系我们</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="foot_left">© 2026 StarLeap Tech LLC · Colorado, USA</span>
+    <span data-i18n="foot_right">Built lean, shipped for real.</span>
+  </div>
+</footer>
+
+<script>
+var I18N = { en: {
+nav_home: "Home", nav_tech: "Daily Tech Briefing", nav_deals: "Global Deal Hunter", nav_guide: "Global Launch Checklist", nav_tools: "AI Tools Picks", nav_contact: "Contact",
+hero_kicker: "TESTED IN PRODUCTION BY STARLEAP", hero_title: "AI Tools We Actually Use",
+hero_lede: "Directory sites copy each other's lists. We only list tools running in our own production environment, each with a hands-on score, a price tier, and free-plan status. The lower half is the Innovation Lab: the workflow recipes that turn tools into production lines, with the output numbers to prove it.",
+stat1: "tools in active use", stat2: "categories", stat3: "public workflow recipes", stat4: "with a free tier to start",
+t_eyebrow: "THE SCOREBOARD", t_title: "One table: scores, prices, free plans",
+t_lede: "Scores are our hands-on rating across quality, speed, value, and learning curve (10 max). Prices are approximate paid entry points; check each vendor's site before subscribing (November 2026).",
+th_tool: "Tool", th_cat: "Category", th_score: "Score", th_best: "Best for", th_price: "Paid from", th_free: "Free plan",
+c_video: "Video generation", c_image: "Image", c_voice: "Voice", c_lip: "Lip-sync", c_llm: "LLM", c_research: "Research",
+b_seedance: "Ad shorts and story-driven video", b_kling: "Long takes and motion", b_runway: "Pro editing workflows", b_banana: "Edits and character consistency", b_mj: "Textured posters and style frames", b_el: "English ad voice-over", b_w2l: "Word-accurate talking-head lip-sync", b_piper: "Multilingual offline voice-over", b_claude: "Long-form writing and agent pipelines", b_gpt: "All-round daily use and images", b_gemini: "Multimodal and long context", b_ds: "High-volume API calls on a budget", b_pplx: "Fast research with sources", b_nblm: "Digesting documents, audio overviews",
+p_api: "Usage-based API", p_api2: "Usage-based, very low", p_free: "Free (your own compute)", p_free2: "Free tier is enough",
+yes: "Yes", no: "No",
+t_note: "Scoring: quality 40% + speed 20% + value 25% + learning curve 15%, rated by StarLeap inside real client deliveries. No vendor sponsorships. Prices change often; confirm on the official site before paying.",
+c_eyebrow: "PICKS BY JOB", c_title: "Choose by the job, not by the hype",
+hasfree: "Free plan available", opensrc: "Open source, free",
+v_seedance: "Our ad-film workhorse. The strongest director's feel in the class: storyboards, camera moves, lip-sync, and native audio in one pass. Nothing else currently finishes Chinese short drama and ads at this level.",
+v_banana: "Edits and character consistency are the killer features: one reference image locks a character across scenes and outfits, which doubles series-production speed.",
+v_el: "The ceiling for English voice-over; pacing and emotion closest to a real actor. Most of our overseas ad voice tracks start here.",
+v_w2l: "Word-accurate lip-sync for real-person talking heads. Open source and self-hosted; render long videos in segments. That detail cost us real rework to learn.",
+v_claude: "The hub of our writing, scripting, and agent pipelines. The steadiest long-form writer, and it does not drift on long tasks. Our content production lines are built around it.",
+v_ds: "The value king. Repetitive, high-volume small jobs go to its API at near-negligible cost, saving the budget for the expensive models on hard problems.",
+lab_eyebrow: "INNOVATION", lab_title: "Innovation Lab: tools are cheap, recipes are not",
+lab_h: "Three recipes we run every day",
+lab_lede: "Anyone can buy a single tool. The gap comes from chaining tools into a quality-controlled pipeline. These three run in our production today, with the full chain and output numbers public.",
+r1_t: "Recipe 1: The AI ad-film pipeline",
+r1_f: "Script → Seedance storyboard generation → ElevenLabs / Piper voice → frame-by-frame QC (3 frames per shot) → silence detection → final cut",
+r1_d: "The point is not generation, it is QC: every film is frame-checked for glitches and run through full-track silence detection before delivery, with narration running through the whole piece. Standards bought with real rework.",
+r1_n1: "ad films delivered", r1_n2: "delivery languages (EN / TR / CN)", r1_n3: "pre-delivery QC coverage",
+r2_t: "Recipe 2: The talking-head lip-sync pipeline",
+r2_f: "Portrait photo → TTS voice → Wav2Lip segmented lip-sync (about 12s per segment) → concat → burned subtitles → timestamp continuity check",
+r2_d: "Rendering a long video in one pass runs out of memory; segments are the answer. Joins must be rebuilt with filters and timestamp-checked frame by frame, or the picture freezes and drifts.",
+r2_n1: "per render segment", r2_n2: "talking-head films delivered", r2_n3: "per finished film",
+r3_t: "Recipe 3: The dual intelligence pipelines",
+r3_f: "Patrol every 4 hours → verify against official domains → graded database → bilingual publishing; Daily briefing: real news sources → cited per item → CN/EN editions live",
+r3_d: "Deal intelligence and the tech briefing share one verify-first skeleton: new entries start unverified, and only official links get promoted. That is how a content product earns trust.",
+r3_n1: "live intelligence entries", r3_n2: "confirmed total value", r3_n3: "patrol interval",
+cta_title: "Got the tools. Missing the people who chain them together?",
+cta_text: "AI ad films, talking-head videos, independent websites, and content pipelines: we deliver all of them in production. Want this recipe set working on your product? Talk to us.",
+cta_btn: "Contact us",
+foot_left: "© 2026 StarLeap Tech LLC · Colorado, USA", foot_right: "Built lean, shipped for real."
+} };
+function applyLang(lang) {
+  if (lang === "zh") { location.reload(); return; }
+  var dict = I18N[lang]; if (!dict) return;
+  document.documentElement.lang = "en";
+  document.querySelectorAll("[data-i18n]").forEach(function (el) {
+    var k = el.getAttribute("data-i18n");
+    if (dict[k]) el.innerHTML = dict[k];
+  });
+  document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+    b.classList.toggle("active", b.getAttribute("data-lang-btn") === lang);
+  });
+  try { localStorage.setItem("sl-lang", lang); } catch (e) {}
+}
+document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
+  b.addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
+});
+try {
+  if (localStorage.getItem("sl-lang") === "en") applyLang("en");
+} catch (e) {}
+</script>
+</body>
+</html>
