@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-lang="zh">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="每日科技讯息 — StarLeap Tech LLC 每日整理的全球科技新闻：AI、芯片、云计算与数据中心、科技公司与资本动态，全部标注公开来源，每日更新。">
+<meta name="description" content="每日科技讯息 — StarLeap Tech LLC 每日整理的全球科技新闻：AI、芯片、云计算与数据中心、科技公司与资本动态，全部标注公开来源，中英双语，每日更新。">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>每日科技讯息 — AI、芯片与云计算每日要闻 | StarLeap Tech LLC</title>
 <link rel="canonical" href="https://www.starleaptech.dpdns.org/tech.html">
 <meta property="og:title" content="每日科技讯息 | StarLeap Tech LLC">
-<meta property="og:description" content="每日更新的全球科技要闻：AI、芯片、云与数据中心、科技资本动态，标注来源，可溯源。">
+<meta property="og:description" content="每日更新的全球科技要闻：AI、芯片、云与数据中心、科技资本动态，中英双语，标注来源，可溯源。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.starleaptech.dpdns.org/tech.html">
 <meta property="og:image" content="https://www.starleaptech.dpdns.org/icon-512.png">
@@ -30,10 +30,13 @@ p{margin:0}a{color:var(--accent-strong)}
 .brand-name{font-family:"Archivo",sans-serif;font-weight:700;font-size:17px}
 .brand-name span{color:var(--accent-strong)}
 .brand-sub{display:block;font-size:11.5px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase}
-.main-nav{display:flex;gap:4px;flex-wrap:wrap}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 .main-nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:8px}
 .main-nav a:hover{background:var(--bg-soft);color:var(--text)}
 .main-nav a.active{color:var(--accent-strong)}
+.lang-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;margin-left:8px}
+.lang-switch button{font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang-switch button.active{background:var(--navy);color:#fff}
 .hero{background:var(--navy);color:#eef3f8;padding:56px 0 48px}
 .hero .kicker{color:#7fd8c6;font-weight:700;letter-spacing:.08em;font-size:13px}
 .hero h1{color:#fff;font-size:clamp(32px,5vw,46px);margin:12px 0 14px}
@@ -60,6 +63,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--muted);text-decoration:none;font-weight:600}
 footer a:hover{color:var(--text)}
+html[data-lang="zh"] .len{display:none}
+html[data-lang="en"] .lzh{display:none}
 </style>
 </head>
 <body>
@@ -70,10 +75,13 @@ footer a:hover{color:var(--text)}
       <span><span class="brand-name">StarLeap <span>Tech</span> LLC</span><span class="brand-sub">Software · Cloud · AI Tools</span></span>
     </a>
     <nav class="main-nav">
-      <a href="/">首页</a>
+      <a href="/"><span class="lzh">首页</span><span class="len">Home</span></a>
       <a href="/deals.html">Deal Hunter</a>
-      <a href="/tech.html" class="active">每日科技讯息</a>
-      <a href="/#contact">联系我们</a>
+      <a href="/tech.html" class="active"><span class="lzh">每日科技讯息</span><span class="len">Tech Briefing</span></a>
+      <a href="/#contact"><span class="lzh">联系我们</span><span class="len">Contact</span></a>
+      <span class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en">EN</button><button type="button" data-lang-btn="zh">中文</button>
+      </span>
     </nav>
   </div>
 </header>
@@ -81,64 +89,64 @@ footer a:hover{color:var(--text)}
 <section class="hero">
   <div class="wrap">
     <p class="kicker">StarLeap Tech LLC · Daily Tech Briefing</p>
-    <h1>每日科技讯息</h1>
-    <p>每天整理全球科技要闻：人工智能、芯片半导体、云计算与数据中心、科技公司与资本动态。每条标注公开来源，点得开、查得到。</p>
-    <span class="edition">本期：2026 年 11 月 13 日 · 星期五</span>
+    <h1><span class="lzh">每日科技讯息</span><span class="len">Daily Tech Briefing</span></h1>
+    <p><span class="lzh">每天整理全球科技要闻：人工智能、芯片半导体、云计算与数据中心、科技公司与资本动态。每条标注公开来源，点得开、查得到。</span><span class="len">A daily digest of global technology news — AI, semiconductors, cloud &amp; data centers, tech companies and capital — every story linked to its original source.</span></p>
+    <span class="edition"><span class="lzh">本期：2026 年 11 月 13 日 · 星期五</span><span class="len">Edition: Friday, November 13, 2026</span></span>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
     <p class="eyebrow">Top Story</p>
-    <h2>今日头条</h2>
+    <h2><span class="lzh">今日头条</span><span class="len">Top story</span></h2>
     <article class="featured">
-      <span class="chip hot">芯片 · 头条</span>
-      <h3>黄仁勋辞任英伟达 CEO，CFO 克雷斯出任临时 CEO</h3>
-      <p>11 月 12 日，英伟达宣布黄仁勋即刻辞去总裁、首席执行官及董事职务，首席财务官 Colette Kress 出任临时 CEO，公司已启动正式继任者遴选。此事发生在 Megaspeed 芯片转运调查持续发酵之际，黄仁勋还被要求在感恩节前赴美国国会作证。此前两个交易日，英伟达股价累计下跌逾 9%，市值蒸发超过 4200 亿美元，云厂商已开始评估谷歌、AMD 的替代芯片方案。</p>
-      <p class="meta">来源：TechCrunch、韩国时报等 · 2026-11-13 · <a href="https://www.koreatimes.co.kr/world/20261113/chinas-access-to-nvidia-chips-in-doubt-as-curbs-gain-traction-in-us-congress" target="_blank" rel="noopener">阅读原文</a></p>
+      <span class="chip hot"><span class="lzh">芯片 · 头条</span><span class="len">Chips · Top story</span></span>
+      <h3><span class="lzh">黄仁勋辞任英伟达 CEO，CFO 克雷斯出任临时 CEO</span><span class="len">Jensen Huang resigns as Nvidia CEO; CFO Colette Kress named interim CEO</span></h3>
+      <p><span class="lzh">11 月 12 日，英伟达宣布黄仁勋即刻辞去总裁、首席执行官及董事职务，首席财务官 Colette Kress 出任临时 CEO，公司已启动正式继任者遴选。此事发生在 Megaspeed 芯片转运调查持续发酵之际，黄仁勋还被要求在感恩节前赴美国国会作证。此前两个交易日，英伟达股价累计下跌逾 9%，市值蒸发超过 4200 亿美元，云厂商已开始评估谷歌、AMD 的替代芯片方案。</span><span class="len">On November 12, Nvidia announced that Jensen Huang had resigned as president, CEO and board member with immediate effect, with CFO Colette Kress named interim CEO while a permanent successor is sought. The move comes as the Megaspeed chip-diversion investigation widens; Huang has also been summoned to testify before the U.S. Congress before Thanksgiving. Nvidia shares had fallen more than 9% over the prior two sessions, wiping out over $420 billion in market value, and cloud providers have begun evaluating Google and AMD alternatives.</span></p>
+      <p class="meta"><span class="lzh">来源：TechCrunch、韩国时报等 · 2026-11-13 · </span><span class="len">Sources: TechCrunch, The Korea Times · Nov 13, 2026 · </span><a href="https://www.koreatimes.co.kr/world/20261113/chinas-access-to-nvidia-chips-in-doubt-as-curbs-gain-traction-in-us-congress" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
     </article>
 
     <div class="grid">
       <article class="card">
-        <span class="chip">政策</span>
-        <h3>美国国会两党推动收紧对华 AI 芯片出口</h3>
-        <p>众议院议长约翰逊表示，国会在限制对华芯片出口上正形成共识。议员们推动至少四项法案：AI Overwatch Act（国会掌握出口审批权）、Chip Security Act（芯片定位追踪防走私）、Match Act（施压盟友限制设备出口）与 Remote Access Security Act（限制通过海外数据中心远程租用英伟达芯片）。</p>
-        <p class="meta">来源：韩国时报 · 2026-11-13 · <a href="https://www.koreatimes.co.kr/world/20261113/chinas-access-to-nvidia-chips-in-doubt-as-curbs-gain-traction-in-us-congress" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">政策</span><span class="len">Policy</span></span>
+        <h3><span class="lzh">美国国会两党推动收紧对华 AI 芯片出口</span><span class="len">U.S. Congress pushes tighter AI chip export curbs on China</span></h3>
+        <p><span class="lzh">众议院议长约翰逊表示，国会在限制对华芯片出口上正形成共识。议员们推动至少四项法案：AI Overwatch Act（国会掌握出口审批权）、Chip Security Act（芯片定位追踪防走私）、Match Act（施压盟友限制设备出口）与 Remote Access Security Act（限制通过海外数据中心远程租用英伟达芯片）。</span><span class="len">House Speaker Mike Johnson said Congress is reaching consensus on limiting chip exports to China. Lawmakers are advancing at least four bills: the AI Overwatch Act (congressional say over export approvals), the Chip Security Act (chip location tracking), the Match Act (pressuring allies on equipment sales) and the Remote Access Security Act (restricting rental of Nvidia chips via overseas data centers).</span></p>
+        <p class="meta"><span class="lzh">来源：韩国时报 · 2026-11-13 · </span><span class="len">Source: The Korea Times · Nov 13, 2026 · </span><a href="https://www.koreatimes.co.kr/world/20261113/chinas-access-to-nvidia-chips-in-doubt-as-curbs-gain-traction-in-us-congress" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
 
       <article class="card">
-        <span class="chip">芯片</span>
-        <h3>中芯国际：AI 芯片供应链紧张将持续到 2027 年</h3>
-        <p>中芯国际联席 CEO 赵海军在财报沟通中表示，AI 行业仍处早期、需求强劲，受数据中心与私有云需求拉动，AI 相关半导体供应链紧张将持续到 2027 年，存储芯片供需预计到 2028 年中下旬才趋于平衡。公司第三季度产能利用率升至 97.3%，接近满产。</p>
-        <p class="meta">来源：路透社 · 2026-11-13 · <a href="https://wdsm710.com/2026/11/12/smic-says-ai-chip-supply-chain-will-remain-tight-through-2027/" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">芯片</span><span class="len">Chips</span></span>
+        <h3><span class="lzh">中芯国际：AI 芯片供应链紧张将持续到 2027 年</span><span class="len">SMIC: AI chip supply chain stays tight through 2027</span></h3>
+        <p><span class="lzh">中芯国际联席 CEO 赵海军在财报沟通中表示，AI 行业仍处早期、需求强劲，受数据中心与私有云需求拉动，AI 相关半导体供应链紧张将持续到 2027 年，存储芯片供需预计到 2028 年中下旬才趋于平衡。公司第三季度产能利用率升至 97.3%，接近满产。</span><span class="len">SMIC co-CEO Zhao Haijun told an earnings call that AI demand remains strong and the industry is still in its early stages: the AI semiconductor supply chain will stay tight through 2027 on data-center and private-cloud demand, with memory supply and demand balancing only toward mid-to-late 2028. The foundry's Q3 utilization rose to 97.3%, near full capacity.</span></p>
+        <p class="meta"><span class="lzh">来源：路透社 · 2026-11-13 · </span><span class="len">Source: Reuters · Nov 13, 2026 · </span><a href="https://wdsm710.com/2026/11/12/smic-says-ai-chip-supply-chain-will-remain-tight-through-2027/" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
 
       <article class="card">
-        <span class="chip">芯片</span>
-        <h3>国产 AI 加速器合计份额首次超过英伟达</h3>
-        <p>据行业数据汇总报道，中国国产 AI 加速器合计市场份额首次超过英伟达：华为昇腾以 28% 居首、出货量超过 57 万片，阿里平头哥以 7% 居第三。国产替代在出货量维度迈过拐点，后续看点是软件生态与先进制程供给能否跟上。</p>
-        <p class="meta">来源：韩国 AI 每日简报汇总 · 2026-11-13 · <a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=21500" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">芯片</span><span class="len">Chips</span></span>
+        <h3><span class="lzh">国产 AI 加速器合计份额首次超过英伟达</span><span class="len">Chinese AI accelerators' combined share passes Nvidia for the first time</span></h3>
+        <p><span class="lzh">据行业数据汇总报道，中国国产 AI 加速器合计市场份额首次超过英伟达：华为昇腾以 28% 居首、出货量超过 57 万片，阿里平头哥以 7% 居第三。国产替代在出货量维度迈过拐点，后续看点是软件生态与先进制程供给能否跟上。</span><span class="len">Industry data compiled in a Korean daily briefing puts the combined share of Chinese domestic AI accelerators ahead of Nvidia for the first time: Huawei's Ascend leads with 28% on shipments of over 570,000 units, and Alibaba's T-Head ranks third with 7%. The open questions are software ecosystems and advanced-node supply.</span></p>
+        <p class="meta"><span class="lzh">来源：韩国 AI 每日简报汇总 · 2026-11-13 · </span><span class="len">Source: Korean AI daily briefing compilation · Nov 13, 2026 · </span><a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=21500" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
 
       <article class="card">
-        <span class="chip">算力</span>
-        <h3>SpaceX 拟投超 740 亿美元建两座 AI 超算园区</h3>
-        <p>SpaceX 11 月 12 日宣布，计划在得克萨斯州与亚利桑那州投资超过 740 亿美元，建设两座面向人工智能的超级计算数据中心园区。得州项目选址 Starbase 附近约 444 英亩自有土地并自建燃气发电；亚利桑那项目约 500 亿美元，仍待县政府批准，已遭社区反对，听证会定于 12 月举行。</p>
-        <p class="meta">来源：IT之家援引 SpaceX 公告、路透社 · 2026-11-12 · <a href="https://www.aidailyinsights.cn/briefs/?topic=EPYC%209006" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">算力</span><span class="len">Compute</span></span>
+        <h3><span class="lzh">SpaceX 拟投超 740 亿美元建两座 AI 超算园区</span><span class="len">SpaceX plans $74B+ for two AI supercomputing campuses</span></h3>
+        <p><span class="lzh">SpaceX 11 月 12 日宣布，计划在得克萨斯州与亚利桑那州投资超过 740 亿美元，建设两座面向人工智能的超级计算数据中心园区。得州项目选址 Starbase 附近约 444 英亩自有土地并自建燃气发电；亚利桑那项目约 500 亿美元，仍待县政府批准，已遭社区反对，听证会定于 12 月举行。</span><span class="len">SpaceX announced on November 12 that it plans to invest more than $74 billion in two AI supercomputing data-center campuses in Texas and Arizona. The Texas site covers roughly 444 acres near Starbase with its own gas-fired power; the roughly $50 billion Arizona project still needs county approval, faces community opposition, and goes to a hearing in December.</span></p>
+        <p class="meta"><span class="lzh">来源：IT之家援引 SpaceX 公告、路透社 · 2026-11-12 · </span><span class="len">Sources: IT Home via SpaceX announcement, Reuters · Nov 12, 2026 · </span><a href="https://www.aidailyinsights.cn/briefs/?topic=EPYC%209006" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
 
       <article class="card">
-        <span class="chip">资本</span>
-        <h3>Anthropic IPO 询价首日足额认购，11 月 19 日挂牌</h3>
-        <p>正在冲刺上市的 Anthropic 询价首日即获足额认购：发行价区间 70–78 美元，拟募资约 610 亿美元，对应估值约 1.1 万亿至 1.3 万亿美元。预计 11 月 18 日定价、11 月 19 日以代码「ANT」在纳斯达克开始交易，有望成为第一家以 AI 为主业的上市公司。本周它刚发布了 Claude Sheets 等办公套件。</p>
-        <p class="meta">来源：综合公开报道 · 2026-11-13 · <a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=21500" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">资本</span><span class="len">Capital</span></span>
+        <h3><span class="lzh">Anthropic IPO 询价首日足额认购，11 月 19 日挂牌</span><span class="len">Anthropic IPO fully subscribed on day one; trading starts Nov 19</span></h3>
+        <p><span class="lzh">正在冲刺上市的 Anthropic 询价首日即获足额认购：发行价区间 70–78 美元，拟募资约 610 亿美元，对应估值约 1.1 万亿至 1.3 万亿美元。预计 11 月 18 日定价、11 月 19 日以代码「ANT」在纳斯达克开始交易，有望成为第一家以 AI 为主业的上市公司。本周它刚发布了 Claude Sheets 等办公套件。</span><span class="len">Anthropic's IPO book-building was fully subscribed on its first day: a $70–78 price range, roughly $61 billion to be raised, and a valuation of about $1.1–1.3 trillion. Pricing is expected on November 18 with trading on Nasdaq under "ANT" from November 19 — set to be the first pure-play AI listing. The company also launched its Claude Sheets office suite this week.</span></p>
+        <p class="meta"><span class="lzh">来源：综合公开报道 · 2026-11-13 · </span><span class="len">Sources: public reports · Nov 13, 2026 · </span><a href="https://kimkj.com/en/daily-briefing-en/?mod=document&uid=21500" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
 
       <article class="card">
-        <span class="chip">云计算</span>
-        <h3>Nebius 上调 2027 年支出计划至 400 亿美元</h3>
-        <p>云厂商 Nebius 在财报会上称，2027 年资本支出计划将达 400 亿美元，远超华尔街预期，资金靠客户预付款与合同担保贷款解决：第三季度签约 120 亿美元，对应资本开支已 100% 由预付款覆盖。同时因新泽西 Vineland 等数据中心延期，公司将 2026 年收入预期下调 2 亿美元至约 30 亿美元。</p>
-        <p class="meta">来源：TechCrunch · 2026-11-12 · <a href="https://techcrunch.com/2026/11/" target="_blank" rel="noopener">阅读原文</a></p>
+        <span class="chip"><span class="lzh">云计算</span><span class="len">Cloud</span></span>
+        <h3><span class="lzh">Nebius 上调 2027 年支出计划至 400 亿美元</span><span class="len">Nebius lifts 2027 spending plan to $40B</span></h3>
+        <p><span class="lzh">云厂商 Nebius 在财报会上称，2027 年资本支出计划将达 400 亿美元，远超华尔街预期，资金靠客户预付款与合同担保贷款解决：第三季度签约 120 亿美元，对应资本开支已 100% 由预付款覆盖。同时因新泽西 Vineland 等数据中心延期，公司将 2026 年收入预期下调 2 亿美元至约 30 亿美元。</span><span class="len">Cloud provider Nebius told its earnings call that 2027 capital spending will reach $40 billion — far above Wall Street expectations — funded by customer prepayments and contract-backed loans: Q3 signings totaled $12 billion, with prepayments covering 100% of the related capex. Delays at sites including Vineland, New Jersey, led it to cut 2026 revenue guidance by $200 million to about $3 billion.</span></p>
+        <p class="meta"><span class="lzh">来源：TechCrunch · 2026-11-12 · </span><span class="len">Source: TechCrunch · Nov 12, 2026 · </span><a href="https://techcrunch.com/2026/11/" target="_blank" rel="noopener"><span class="lzh">阅读原文</span><span class="len">Read the story</span></a></p>
       </article>
     </div>
   </div>
@@ -147,7 +155,7 @@ footer a:hover{color:var(--text)}
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="note-box">
-      <b>关于本页：</b>「每日科技讯息」由 StarLeap Tech LLC 每日整理，内容来自公开新闻来源并逐条标注出处与原文链接，仅作信息参考，不构成投资建议。往期内容每日覆盖更新，建议当天阅读。
+      <span class="lzh"><b>关于本页：</b>「每日科技讯息」由 StarLeap Tech LLC 每日整理，内容来自公开新闻来源并逐条标注出处与原文链接，中英双语，仅作信息参考，不构成投资建议。往期内容每日覆盖更新，建议当天阅读。</span><span class="len"><b>About this page:</b> The Daily Tech Briefing is compiled by StarLeap Tech LLC from public news sources, with every story attributed and linked to its original report, in Chinese and English. It is published for information only and is not investment advice. Editions are replaced daily — read today's while it is current.</span>
     </div>
   </div>
 </section>
@@ -155,8 +163,32 @@ footer a:hover{color:var(--text)}
 <footer>
   <div class="wrap">
     <span>© 2026 StarLeap Tech LLC · Pritchett, Colorado, USA</span>
-    <span><a href="/">首页</a> · <a href="/deals.html">Deal Hunter</a> · <a href="/tech.html">每日科技讯息</a></span>
+    <span><a href="/"><span class="lzh">首页</span><span class="len">Home</span></a> · <a href="/deals.html">Deal Hunter</a> · <a href="/tech.html"><span class="lzh">每日科技讯息</span><span class="len">Tech Briefing</span></a></span>
   </div>
 </footer>
+
+<script>
+  function applyLang(lang) {
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = lang === "zh"
+      ? "每日科技讯息 — AI、芯片与云计算每日要闻 | StarLeap Tech LLC"
+      : "Daily Tech Briefing — AI, Chips & Cloud News | StarLeap Tech LLC";
+    var btns = document.querySelectorAll("[data-lang-btn]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle("active", btns[i].getAttribute("data-lang-btn") === lang);
+    }
+    try { localStorage.setItem("sl-lang", lang); } catch (e) {}
+  }
+  (function () {
+    var saved = "zh";
+    try { saved = localStorage.getItem("sl-lang") || "zh"; } catch (e) {}
+    applyLang(saved === "en" ? "en" : "zh");
+    var btns = document.querySelectorAll("[data-lang-btn]");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
+    }
+  })();
+</script>
 </body>
 </html>
