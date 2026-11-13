@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#fff;--bg-soft:#f4f6f8;--surface:#fff;--text:#0c1a2e;--muted:#526173;--faint:#7c8a9c;--line:#dde3e8;--line-strong:#c9d2da;--navy:#0b1d3a;--navy-2:#12294d;--accent:#0e7c6b;--accent-strong:#0a6356;--accent-soft:#e3f2ee;--radius:14px}
-*{box-sizing:border-box}body{margin:0;font-family:"Public Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16.5px}
+*{box-sizing:border-box}body{margin:0;font-family:"Public Sans","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16.5px}
 h1,h2,h3{font-family:"Archivo","Public Sans",sans-serif;line-height:1.15;letter-spacing:-.015em;margin:0}
 p{margin:0}a{color:var(--accent-strong)}
 .wrap{width:min(1160px,100% - 40px);margin-inline:auto}
@@ -85,30 +85,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .filterbar{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
 .filterbar input,.filterbar select{font:inherit;padding:11px 13px;border:1px solid var(--line-strong);border-radius:9px;background:#fff;color:var(--text)}
 .filterbar input{flex:1;min-width:220px}
+
+.lang-switch{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;margin-left:8px;vertical-align:middle}
+.lang-switch button{font:inherit;font-size:13px;font-weight:700;padding:6px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.lang-switch button.active{background:var(--navy);color:#fff}
+html[data-lang="en"] .lzh{display:none}
+html[data-lang="zh"] .len{display:none}
 </style>
 </head>
 <body>
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="/"><span class="brand-mark">SL</span><span><span class="brand-name">StarLeap <span>Tech LLC</span></span><span class="brand-sub">Software · Cloud · AI</span></span></a>
-<nav class="main-nav"><a href="/#about">About</a><a href="/#services">Services</a><a href="/deals.html" class="active">Deal Hunter</a><a href="/#contact">Contact Us</a></nav>
+<nav class="main-nav"><a href="/#about"><span class="lzh">关于</span><span class="len">About</span></a><a href="/#services"><span class="lzh">服务</span><span class="len">Services</span></a><a href="/deals.html" class="active">Deal Hunter</a><a href="/tech.html"><span class="lzh">每日科技讯息</span><span class="len">Tech Briefing</span></a><a href="/#contact"><span class="lzh">联系我们</span><span class="len">Contact Us</span></a><span class="lang-switch" role="group" aria-label="Language"><button type="button" data-lang-btn="en">EN</button><button type="button" data-lang-btn="zh">中文</button></span></nav>
 </div></header>
 
 <section class="hero"><div class="wrap">
-<p class="kicker">A StarLeap Tech LLC product</p>
+<p class="kicker"><span class="lzh">StarLeap Tech LLC 旗下产品</span><span class="len">A StarLeap Tech LLC product</span></p>
 <h1>Global Deal Hunter</h1>
-<p>Verified free credits, free trials and sign-up bonuses — for cloud platforms, AI tools, banking and crypto. Every offer is checked against its official source before it is listed, and every listing states who can actually claim it.</p>
+<p><span class="lzh">已核实的免费额度、免费试用和开户奖励——覆盖云平台、AI 工具、银行与加密货币。每条在上榜前都回官方来源核对，并写明到底谁能领。</span><span class="len">Verified free credits, free trials and sign-up bonuses — for cloud platforms, AI tools, banking and crypto. Every offer is checked against its official source before it is listed, and every listing states who can actually claim it.</span></p>
 <div class="stats">
-<div class="stat"><b>170</b><span>active offers tracked</span></div>
-<div class="stat"><b>$265,725+</b><span>confirmed value listed</span></div>
-<div class="stat"><b>Every 4 hours</b><span>patrol re-checks &amp; discovers</span></div>
-<div class="stat"><b>Nov 13, 2026</b><span>board last updated</span></div>
+<div class="stat"><b>170</b><span><span class="lzh">条活动在榜追踪</span><span class="len">active offers tracked</span></span></div>
+<div class="stat"><b>$265,725+</b><span><span class="lzh">已确认价值</span><span class="len">confirmed value listed</span></span></div>
+<div class="stat"><b><span class="lzh">每 4 小时</span><span class="len">Every 4 hours</span></b><span><span class="lzh">巡检复核与发现</span><span class="len">patrol re-checks &amp; discovers</span></span></div>
+<div class="stat"><b>Nov 13, 2026</b><span><span class="lzh">看板最近更新</span><span class="len">board last updated</span></span></div>
 </div>
 </div></section>
 
 <section class="section"><div class="wrap">
-<p class="eyebrow">Featured · Verified</p>
-<h2>Checked offers worth your time</h2>
-<p class="lede">Hand-picked from the board. “Verified” means the offer and its terms were confirmed on the provider’s official page. Read the eligibility line before you start — it is the part most deal sites hide.</p>
+<p class="eyebrow"><span class="lzh">精选 · 已验证</span><span class="len">Featured · Verified</span></p>
+<h2><span class="lzh">值得花时间的已核实优惠</span><span class="len">Checked offers worth your time</span></h2>
+<p class="lede"><span class="lzh">从看板里精选。“已验证”意味着优惠和条款已在官方页面确认。动手前先看资格那一行——那正是大多数羊毛站藏起来的部分。</span><span class="len">Hand-picked from the board. “Verified” means the offer and its terms were confirmed on the provider’s official page. Read the eligibility line before you start — it is the part most deal sites hide.</span></p>
 <div class="grid">
 <article class="card">
 <span class="chip">Black Friday</span>
@@ -165,19 +171,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 </article>
 
 <div class="card" style="margin-top:18px">
-<span class="chip warn">US only · Read conditions</span>
-<h3>US bank account bonuses we track</h3>
+<span class="chip warn"><span class="lzh">仅限美国 · 先看条件</span><span class="len">US only · Read conditions</span></span>
+<h3><span class="lzh">我们追踪的美国银行账户奖励</span><span class="len">US bank account bonuses we track</span></h3>
 <p>Citizens — up to <b>$600</b> (ends Nov 15, 2026) · KeyBank — <b>$500</b> (ends Dec 11, 2026) · PNC Virtual Wallet — up to <b>$400</b> (ends Jan 7, 2027). All require US residency and qualifying payroll direct deposits. If that is not you, skip them — we list them so nobody wastes a trip.</p>
-<p class="meta">Full terms on each bank’s official offer page.</p>
+<p class="meta"><span class="lzh">完整条款见各银行官方活动页。</span><span class="len">Full terms on each bank’s official offer page.</span></p>
 </div>
 </div></section>
 
 <section class="section soft" id="all-offers"><div class="wrap">
-<p class="eyebrow">Full list · Verified only</p>
-<h2>All verified offers</h2>
-<p class="lede">Every offer below was confirmed on the provider's official page. Unverified leads stay off this page until they check out — that is the rule. Use the filter to find free cloud credits, free AI subscriptions, bank account bonuses and more.</p>
+<p class="eyebrow"><span class="lzh">完整列表 · 仅已验证</span><span class="len">Full list · Verified only</span></p>
+<h2><span class="lzh">全部已验证优惠</span><span class="len">All verified offers</span></h2>
+<p class="lede"><span class="lzh">下面每条都在官方页面确认过。未核实的线索核实前不上这个页面——这是规矩。用筛选找免费云额度、免费 AI 订阅、银行开户奖励等。</span><span class="len">Every offer below was confirmed on the provider's official page. Unverified leads stay off this page until they check out — that is the rule. Use the filter to find free cloud credits, free AI subscriptions, bank account bonuses and more.</span></p>
 <div class="filterbar"><input id="q" type="search" placeholder="Search offers — try “free VPS”, “Claude”, “bank bonus”…" aria-label="Search offers">
-<select id="cat" aria-label="Category"><option value="">All categories</option><option value="vps">Cloud &amp; VPS Credits</option><option value="ai">AI Tools &amp; Subscriptions</option><option value="bank">Bank Account Bonuses</option><option value="crypto">Crypto Rewards</option><option value="ucard">Cards</option><option value="software">Software Deals</option></select></div><div class="cat-head" data-cathead="vps"><h3>Cloud &amp; VPS Credits</h3><p>Free cloud credits, free tiers and VPS trials from Google Cloud, Oracle, Linode, Kamatera and more.</p></div><div class="deal" data-cat="vps">
+<select id="cat" aria-label="Category"><option value="">All categories</option><option value="vps">Cloud &amp; VPS Credits</option><option value="ai">AI Tools &amp; Subscriptions</option><option value="bank">Bank Account Bonuses</option><option value="crypto">Crypto Rewards</option><option value="ucard">Cards</option><option value="software">Software Deals</option></select></div><div class="cat-head" data-cathead="vps"><h3><span class="lzh">云与 VPS 额度</span><span class="len">Cloud &amp; VPS Credits</span></h3><p><span class="lzh">来自 Google Cloud、Oracle、Linode、Kamatera 等的免费云额度、免费层级与 VPS 试用。</span><span class="len">Free cloud credits, free tiers and VPS trials from Google Cloud, Oracle, Linode, Kamatera and more.</span></p></div><div class="deal" data-cat="vps">
 <div class="deal-main"><h3>MongoDB for Startups</h3><p>Startups up to 7 years old (Series B or earlier) with a single software product can apply for up to $15,000 in MongoDB Atlas credits, plus Voyage AI tokens and 30 days of free developer support. The amount depends on stage and investment partner; credits are valid 6–12 months.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Global</span></p></div>
 <div class="deal-side"><span class="deal-value">up to $15,000</span><a class="btn small" href="https://www.mongodb.com/solutions/startups" target="_blank" rel="noopener">Official page</a></div>
@@ -263,7 +269,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>Aiven Free Tier &amp; Startup Program</h3><p>Always-free managed PostgreSQL, MySQL, Kafka and OpenSearch plans. The startup program offers $12,000–$100,000 in credits, but approval generally requires external funding or an accelerator affiliation.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Global</span> </p></div>
 <div class="deal-side"><span class="deal-value">Free tier</span><a class="btn small" href="https://aiven.io/startups" target="_blank" rel="noopener">Official page</a></div>
-</div><div class="cat-head" data-cathead="ai"><h3>AI Tools &amp; Subscriptions</h3><p>Free AI subscriptions and credits: Claude, ChatGPT, Gemini and GitHub Copilot offers.</p></div><div class="deal" data-cat="ai">
+</div><div class="cat-head" data-cathead="ai"><h3><span class="lzh">AI 工具与订阅</span><span class="len">AI Tools &amp; Subscriptions</span></h3><p><span class="lzh">Claude、ChatGPT、Gemini、GitHub Copilot 等的免费 AI 订阅与额度。</span><span class="len">Free AI subscriptions and credits: Claude, ChatGPT, Gemini and GitHub Copilot offers.</span></p></div><div class="deal" data-cat="ai">
 <div class="deal-main"><h3>Higgsfield 11.11 Sale</h3><p>Up to 60% off annual plans: Plus drops from $59 to $35 a month, Ultra 3K from $129 to $65. Plus and Ultra annual plans also get up to 60 days of unlimited generation on selected video and image models. A 3-day $0 MCP trial auto-renews, so check the renewal price first.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Global</span> <span class="ends">Ends Nov 14, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">save up to $768</span><a class="btn small" href="https://higgsfield.ai/blog/higgsfield-11-11-deals" target="_blank" rel="noopener">Official page</a></div>
@@ -312,7 +318,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>ElevenLabs First-Month Offer</h3><p>First month of Starter for $1 (regular $6) or Creator for $11 (regular $22), with a commercial license and voice-cloning credits. Renews at the regular monthly price after the first month; pause or cancel anytime. Starter offer ends Nov 16, 2026.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Global</span> <span class="ends">Starter ends Nov 16, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">$5–$11 saved</span><a class="btn small" href="https://elevenlabs.io/pricing" target="_blank" rel="noopener">Official page</a></div>
-</div><div class="cat-head" data-cathead="bank"><h3>Bank Account Bonuses</h3><p>US bank sign-up bonuses from Chase, Bank of America, Wells Fargo, HSBC and others — with the direct-deposit requirements stated up front.</p></div><div class="deal" data-cat="bank">
+</div><div class="cat-head" data-cathead="bank"><h3><span class="lzh">银行账户奖励</span><span class="len">Bank Account Bonuses</span></h3><p><span class="lzh">Chase、美国银行、富国银行、汇丰等美国银行开户奖励——直存要求写在明处。</span><span class="len">US bank sign-up bonuses from Chase, Bank of America, Wells Fargo, HSBC and others — with the direct-deposit requirements stated up front.</span></p></div><div class="deal" data-cat="bank">
 <div class="deal-main"><h3>Mercury Business Referral</h3><p>Open a Mercury business account through an existing customer’s referral link and deposit $10,000 within 90 days (held at least one full business day) — you and the referrer each get $250. Mercury is a fintech, not a bank; deposits sit with partner banks.</p>
 <p class="meta"><span class="chip">Deposit required</span> <span>United States</span></p></div>
 <div class="deal-side"><span class="deal-value">$250</span><a class="btn small" href="https://support.mercury.com/hc/en-us/articles/28772343724308-Earning-referral-bonuses-for-Mercury-business-accounts" target="_blank" rel="noopener">Official page</a></div>
@@ -395,7 +401,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>Fifth Third Checking Bonus</h3><p>Open an eligible checking account and complete a qualifying payroll direct deposit. Check the official page for the full terms and amounts.</p>
 <p class="meta"><span class="chip">Deposit required</span> <span>United States</span> </p></div>
 <div class="deal-side"><span class="deal-value">$300</span><a class="btn small" href="https://www.53.com/content/fifth-third/en/mkg/checking-offer.html" target="_blank" rel="noopener">Official page</a></div>
-</div><div class="cat-head" data-cathead="crypto"><h3>Crypto Rewards</h3><p>Exchange welcome bonuses and referral rewards, with deposit and staking requirements labeled.</p></div><div class="deal" data-cat="crypto">
+</div><div class="cat-head" data-cathead="crypto"><h3><span class="lzh">加密货币奖励</span><span class="len">Crypto Rewards</span></h3><p><span class="lzh">交易所欢迎奖励与推荐奖励，充值与质押要求都标注清楚。</span><span class="len">Exchange welcome bonuses and referral rewards, with deposit and staking requirements labeled.</span></p></div><div class="deal" data-cat="crypto">
 <div class="deal-main"><h3>Coinbase Funding Bonus</h3><p>Earn 3% back in USDC on net funds brought onto Coinbase, up to $15,000 — but it takes $500,000 of inflows to max out ($1,000 in earns $30). Payouts start Nov 16, 2026 in monthly instalments, and funds must stay on Coinbase for 36 months.</p>
 <p class="meta"><span class="chip">Deposit required</span> <span>40+ countries · Coinbase One</span> <span class="ends">Ends Nov 15, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">up to $15,000</span><a class="btn small" href="https://help.coinbase.com/en/coinbase/trading-and-funding/earn-bonus" target="_blank" rel="noopener">Official page</a></div>
@@ -455,7 +461,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>SoFi Crypto Claw Promotion</h3><p>New SoFi Crypto customers who open an account and use the one-time claw grab within 30 days win a random digital-asset award of $2–$1,000 — no purchase required. SoFi's own rules say most people receive $2. Ends Dec 2, 2026.</p>
 <p class="meta"><span class="chip">See terms</span> <span>United States</span> <span class="ends">Ends Dec 2, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">$2–$1,000</span><a class="btn small" href="https://www.sofi.com/crypto/clawpromotion/rules/" target="_blank" rel="noopener">Official page</a></div>
-</div><div class="cat-head" data-cathead="ucard"><h3>Cards</h3><p>Virtual and physical card sign-up offers and referral rewards.</p></div><div class="deal" data-cat="ucard">
+</div><div class="cat-head" data-cathead="ucard"><h3><span class="lzh">卡类优惠</span><span class="len">Cards</span></h3><p><span class="lzh">虚拟卡与实体卡的开户优惠和推荐奖励。</span><span class="len">Virtual and physical card sign-up offers and referral rewards.</span></p></div><div class="deal" data-cat="ucard">
 <div class="deal-main"><h3>Crypto.com Visa Signature Card</h3><p>New cardholders who spend $1,500 in the first 90 days earn $100 in CRO, $2,000 earns $200, and $5,000 earns $300 on top tiers. Everyday spending earns 1.5%–6% back in CRO; higher tiers need a subscription or a 12-month CRO lock-up.</p>
 <p class="meta"><span class="chip">Trading volume required</span> <span>United States</span> <span class="ends">Ends Dec 31, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">up to $300</span><a class="btn small" href="https://crypto.com/eea/events/card-welcome-bonus" target="_blank" rel="noopener">Official page</a></div>
@@ -476,7 +482,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>Bitunix New-User Card Cashback</h3><p>New users activating a Bitunix card for the first time earn 8% cashback on eligible spending within 30 days of activation, capped at 5 USDT per person. Check the official terms page for eligibility and card regions.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Not stated</span> </p></div>
 <div class="deal-side"><span class="deal-value">up to 5 USDT</span><a class="btn small" href="https://www.bitunix.com/hub/helpcenter/article/terms-and-conditions-for-the-8-percent-cashback-promotion-for-new-user-registration?id=311" target="_blank" rel="noopener">Official page</a></div>
-</div><div class="cat-head" data-cathead="software"><h3>Software Deals</h3><p>Free plans and lifetime deals for software and digital services.</p></div><div class="deal" data-cat="software">
+</div><div class="cat-head" data-cathead="software"><h3><span class="lzh">软件优惠</span><span class="len">Software Deals</span></h3><p><span class="lzh">软件与数字服务的免费计划和终身买断优惠。</span><span class="len">Free plans and lifetime deals for software and digital services.</span></p></div><div class="deal" data-cat="software">
 <div class="deal-main"><h3>HubSpot for Startups</h3><p>Eligible startups get HubSpot Professional or Enterprise products 90% off in year one, 50% off in year two and 25% off in year three. The 90% tier needs Pre-seed/Seed/Series A funding under $20M and an approved partner organisation or verifiable funding.</p>
 <p class="meta"><span class="chip">See terms</span> <span>Global</span></p></div>
 <div class="deal-side"><span class="deal-value">save ≈ $8,640</span><a class="btn small" href="https://www.hubspot.com/startups" target="_blank" rel="noopener">Official page</a></div>
@@ -543,7 +549,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 <div class="deal-main"><h3>Baota Panel Double 11 Sale</h3><p>Baota's Double 11 sale (Nov 9–20, 2026): Linux Pro ¥599/year, Enterprise from ¥1,099/year, lifetime licenses from ¥2,888; new users can try Pro for 30 days at ¥11.11 or Enterprise at ¥19.9; DV SSL certificates 50% off; orders and shares enter a prize draw (iPad Air and more). Sale items are non-refundable.</p>
 <p class="meta"><span class="chip">See terms</span> <span>China</span> <span class="ends">Ends Nov 20, 2026</span></p></div>
 <div class="deal-side"><span class="deal-value">Pro ¥599/yr</span><a class="btn small" href="https://www.bt.cn/1111" target="_blank" rel="noopener">Official page</a></div>
-</div><p class="note" id="noresult" style="display:none">No verified offers match that search right now — the patrol re-checks every 4 hours.</p>
+</div><p class="note" id="noresult" style="display:none"><span class="lzh">当前没有符合这个搜索的已验证优惠——巡检每 4 小时复核一次。</span><span class="len">No verified offers match that search right now — the patrol re-checks every 4 hours.</span></p>
 </div></section>
 <script>
 var q=document.getElementById('q'),cat=document.getElementById('cat');
@@ -555,27 +561,27 @@ document.getElementById('noresult').style.display=anyVisible?'none':'';}
 q.addEventListener('input',apply);cat.addEventListener('change',apply);
 </script>
 <section class="section"><div class="wrap">
-<p class="eyebrow">How we list</p>
-<h2>Our honesty rules</h2>
+<p class="eyebrow"><span class="lzh">我们怎么上榜</span><span class="len">How we list</span></p>
+<h2><span class="lzh">我们的诚实规则</span><span class="len">Our honesty rules</span></h2>
 <div class="rules">
-<div class="rule"><b>Official links only</b><p>Every “verified” listing links to the provider’s own page. No official page, no verified badge.</p></div>
-<div class="rule"><b>Types labeled plainly</b><p>Truly free, free trial, deposit required, trading volume required, invite required — labeled as what they are, never blurred.</p></div>
-<div class="rule"><b>Eligibility up front</b><p>Residency, deposit, direct-deposit and verification requirements are stated before you click, not after you sign up.</p></div>
-<div class="rule"><b>Checked every 4 hours</b><p>An automated patrol discovers new offers, re-verifies active ones and archives expired ones.</p></div>
+<div class="rule"><b><span class="lzh">只链官方</span><span class="len">Official links only</span></b><p><span class="lzh">每条“已验证”都链到服务商自己的页面。没有官方页，就没有已验证标记。</span><span class="len">Every “verified” listing links to the provider’s own page. No official page, no verified badge.</span></p></div>
+<div class="rule"><b><span class="lzh">类型写明白</span><span class="len">Types labeled plainly</span></b><p><span class="lzh">真免费、免费试用、需充值、需交易量、需邀请——是什么标什么，绝不含糊。</span><span class="len">Truly free, free trial, deposit required, trading volume required, invite required — labeled as what they are, never blurred.</span></p></div>
+<div class="rule"><b><span class="lzh">资格写在前</span><span class="len">Eligibility up front</span></b><p><span class="lzh">居住、充值、直存、验证等要求在你点击之前就写清，不是注册之后才告诉你。</span><span class="len">Residency, deposit, direct-deposit and verification requirements are stated before you click, not after you sign up.</span></p></div>
+<div class="rule"><b><span class="lzh">每 4 小时复核</span><span class="len">Checked every 4 hours</span></b><p><span class="lzh">自动巡检发现新优惠、复核在榜的、归档过期的。</span><span class="len">An automated patrol discovers new offers, re-verifies active ones and archives expired ones.</span></p></div>
 </div>
-<div class="cats"><span>AI Tools</span><span>Cloud &amp; VPS</span><span>Crypto</span><span>Banks &amp; Cards</span><span>Software Deals</span><span>Ending Soon</span></div>
+<div class="cats"><span><span class="lzh">AI 工具</span><span class="len">AI Tools</span></span><span><span class="lzh">云与 VPS</span><span class="len">Cloud &amp; VPS</span></span><span><span class="lzh">加密货币</span><span class="len">Crypto</span></span><span><span class="lzh">银行与卡</span><span class="len">Banks &amp; Cards</span></span><span><span class="lzh">软件优惠</span><span class="len">Software Deals</span></span><span><span class="lzh">即将截止</span><span class="len">Ending Soon</span></span></div>
 </div></section>
 
 <section class="section"><div class="wrap">
-<p class="eyebrow">Stay in the loop</p>
-<h2>Get the high-value digest</h2>
-<p class="lede">Subscribe and we will send you the offers that are actually claimable — new verified deals worth $50 or more, and high-value offers about to expire. No spam, no recycled lists.</p>
+<p class="eyebrow"><span class="lzh">别错过</span><span class="len">Stay in the loop</span></p>
+<h2><span class="lzh">订阅高价值精选</span><span class="len">Get the high-value digest</span></h2>
+<p class="lede"><span class="lzh">订阅后，我们只发真正能领的：新核实的 $50 以上优惠、以及快到期的高价值优惠。不发垃圾邮件，不炒冷饭。</span><span class="len">Subscribe and we will send you the offers that are actually claimable — new verified deals worth $50 or more, and high-value offers about to expire. No spam, no recycled lists.</span></p>
 <form class="sub-form" action="https://api.web3forms.com/submit" method="POST">
 <input type="hidden" name="access_key" value="6b6eba7f-71c0-428f-9d7f-10eba1dee89a">
 <input type="hidden" name="subject" value="Deal Hunter subscription">
 <input type="checkbox" name="botcheck" style="display:none">
-<label>Your email<input type="email" name="email" required></label>
-<label>What are you hunting?
+<label><span class="lzh">你的邮箱</span><span class="len">Your email</span><input type="email" name="email" required></label>
+<label><span class="lzh">你想蹲哪类？</span><span class="len">What are you hunting?</span>
 <select name="interest">
 <option>Cloud &amp; VPS credits</option>
 <option>AI tool deals</option>
@@ -583,14 +589,48 @@ q.addEventListener('input',apply);cat.addEventListener('change',apply);
 <option>Crypto rewards</option>
 <option>Everything</option>
 </select></label>
-<button type="submit">Subscribe</button>
+<button type="submit"><span class="lzh">订阅</span><span class="len">Subscribe</span></button>
 </form>
-<p class="note">Prefer chat? Reach us on <a href="https://wa.me/12082107415" target="_blank" rel="noopener">WhatsApp</a> — the digest goes out there too.</p>
+<p class="note"><span class="lzh">更喜欢聊天？在 </span><span class="len">Prefer chat? Reach us on </span><a href="https://wa.me/12082107415" target="_blank" rel="noopener">WhatsApp</a><span class="lzh"> 上联系我们——精选也会发在那里。</span><span class="len"> — the digest goes out there too.</span></p>
 </div></section>
 
 <footer><div class="wrap">
-<div><b>Global Deal Hunter</b> is a product of StarLeap Tech LLC.<br>Offers change and expire; always confirm terms on the official page before acting. Bonuses may be taxable.</div>
-<div>© 2026 StarLeap Tech LLC. All rights reserved.<br>131 Railroad St, Pritchett, CO 81064, USA · <a href="/">starleaptech.dpdns.org</a></div>
+<div><b>Global Deal Hunter</b> <span class="lzh">是 StarLeap Tech LLC 的产品。<br>优惠会变动和过期；行动前请在官方页面确认条款。奖励可能需要纳税。</span><span class="len">is a product of StarLeap Tech LLC.<br>Offers change and expire; always confirm terms on the official page before acting. Bonuses may be taxable.</span></div>
+<div>© 2026 StarLeap Tech LLC. <span class="lzh">保留所有权利。</span><span class="len">All rights reserved.</span><br>131 Railroad St, Pritchett, CO 81064, USA · <a href="/">starleaptech.dpdns.org</a></div>
 </div></footer>
+
+<script>
+var SL_TXT = {
+  en: { title: "Global Deal Hunter — Verified Free Credits, Trials & Bonuses | StarLeap Tech LLC",
+        ph: "Search offers — try “free VPS”, “Claude”, “bank bonus”…",
+        cat: {"": "All categories", vps: "Cloud & VPS Credits", ai: "AI Tools & Subscriptions", bank: "Bank Account Bonuses", crypto: "Crypto Rewards", ucard: "Cards", software: "Software Deals"},
+        interest: ["Cloud & VPS credits", "AI tool deals", "Bank & card bonuses", "Crypto rewards", "Everything"] },
+  zh: { title: "Global Deal Hunter 全球羊毛情报中心 — 已验证免费额度与奖励 | StarLeap Tech LLC",
+        ph: "搜索优惠——试试“免费 VPS”“Claude”“银行奖励”…",
+        cat: {"": "全部分类", vps: "云与 VPS 额度", ai: "AI 工具与订阅", bank: "银行账户奖励", crypto: "加密货币奖励", ucard: "卡类优惠", software: "软件优惠"},
+        interest: ["云与 VPS 额度", "AI 工具优惠", "银行与卡奖励", "加密货币奖励", "全部都要"] }
+};
+function applyLang(lang) {
+  var t = SL_TXT[lang] || SL_TXT.en;
+  document.documentElement.setAttribute("data-lang", lang);
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  document.title = t.title;
+  var q = document.getElementById("q"); if (q) q.placeholder = t.ph;
+  var cat = document.getElementById("cat");
+  if (cat) for (var i = 0; i < cat.options.length; i++) { var v = cat.options[i].value; if (t.cat[v] !== undefined) cat.options[i].textContent = t.cat[v]; }
+  var sel = document.querySelector('select[name="interest"]');
+  if (sel) for (var j = 0; j < sel.options.length && j < t.interest.length; j++) sel.options[j].textContent = t.interest[j];
+  var btns = document.querySelectorAll("[data-lang-btn]");
+  for (var k = 0; k < btns.length; k++) btns[k].classList.toggle("active", btns[k].getAttribute("data-lang-btn") === lang);
+  try { localStorage.setItem("sl-lang", lang); } catch (e) {}
+}
+(function () {
+  var saved = "en";
+  try { saved = localStorage.getItem("sl-lang") || "en"; } catch (e) {}
+  applyLang(saved === "zh" ? "zh" : "en");
+  var btns = document.querySelectorAll("[data-lang-btn]");
+  for (var i = 0; i < btns.length; i++) btns[i].addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
+})();
+</script>
 </body>
 </html>
