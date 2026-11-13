@@ -31,12 +31,11 @@
       }
       * { box-sizing: border-box }
       html { scroll-behavior: smooth }
-      body { margin: 0; font-family: "Public Sans", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16.5px }
-      h1, h2, h3 { font-family: "Archivo", "Public Sans", sans-serif; line-height: 1.15; letter-spacing: -.015em; margin: 0 }
+      body { margin: 0; font-family: "Public Sans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16.5px }
+      h1, h2, h3 { font-family: "Archivo", "PingFang SC", "Microsoft YaHei", "Public Sans", sans-serif; line-height: 1.15; letter-spacing: -.015em; margin: 0 }
       p { margin: 0 }
       a { color: var(--accent-strong) }
       .wrap { width: min(1160px, 100% - 40px); margin-inline: auto }
-      /* Header */
       .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line) }
       .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px }
       .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text) }
@@ -49,14 +48,16 @@
       .main-nav a:hover { background: var(--bg-soft); color: var(--text) }
       .main-nav a.nav-cta { background: var(--navy); color: #fff; margin-left: 6px }
       .main-nav a.nav-cta:hover { background: var(--navy-2); color: #fff }
-      /* Hero */
+      .lang-switch { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 999px; overflow: hidden; margin-left: 8px }
+      .lang-switch button { font: inherit; font-size: 13px; font-weight: 700; padding: 6px 12px; border: 0; background: transparent; color: var(--muted); cursor: pointer }
+      .lang-switch button.active { background: var(--navy); color: #fff }
       .hero { background: var(--navy); color: #eef3f8; padding: 76px 0 64px; position: relative; overflow: hidden }
       .hero::after { content: ""; position: absolute; right: -140px; top: -140px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(14,124,107,.35), transparent 65%) }
       .hero .kicker { color: #7fd8c6; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px }
       .hero h1 { color: #fff; font-size: clamp(36px, 5.4vw, 56px); margin: 16px 0 18px; max-width: 820px }
       .hero h1 em { font-style: normal; color: #7fd8c6 }
       .hero .sub { color: #a9bccd; max-width: 680px; font-size: 18.5px }
-      .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px }
+      .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; position: relative; z-index: 1 }
       .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 9px }
       .btn:hover { background: var(--accent-strong) }
       .btn.ghost { background: transparent; border: 1px solid #35507a; color: #dbe7f3 }
@@ -65,7 +66,6 @@
       .hero-stat { background: var(--navy-2); border: 1px solid #22385e; border-radius: 12px; padding: 14px 18px; min-width: 180px }
       .hero-stat b { display: block; font-family: "Archivo", sans-serif; font-size: 21px; color: #fff }
       .hero-stat span { color: #a9bccd; font-size: 13.5px }
-      /* Sections */
       .section { padding: 64px 0 }
       .section.alt { background: var(--bg-soft) }
       .eyebrow { color: var(--accent-strong); font-weight: 700; letter-spacing: .07em; text-transform: uppercase; font-size: 12.5px }
@@ -89,7 +89,6 @@
       .fact { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--surface) }
       .fact span { display: block; color: var(--faint); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; font-weight: 700 }
       .fact b { font-size: 16.5px }
-      /* Contact */
       .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 34px; margin-top: 26px; align-items: start }
       @media (max-width: 820px) { .contact-grid { grid-template-columns: 1fr } }
       .contact-lines { display: grid; gap: 14px; color: var(--muted) }
@@ -100,7 +99,6 @@
       .contact-form button { font: inherit; font-weight: 700; background: var(--navy); color: #fff; border: 0; border-radius: 9px; padding: 12px 22px; cursor: pointer; justify-self: start }
       .contact-form button:hover { background: var(--navy-2) }
       .note { color: var(--faint); font-size: 14px }
-      /* Footer */
       footer { border-top: 1px solid var(--line); padding: 36px 0; color: var(--muted); font-size: 14.5px }
       footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap }
       footer nav { display: flex; gap: 16px; flex-wrap: wrap }
@@ -116,13 +114,16 @@
           <span><span class="brand-name">StarLeap <span>Tech</span> LLC</span><span class="brand-sub">Software · Cloud · AI Tools</span></span>
         </a>
         <nav class="main-nav" aria-label="Main">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#products">Products</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="#products" data-i18n="nav_products">Products</a>
           <a href="/deals.html">Deal Hunter</a>
           <a href="/tech.html">每日科技讯息</a>
-          <a href="#process">How We Work</a>
-          <a href="#contact" class="nav-cta">Contact</a>
+          <a href="#process" data-i18n="nav_process">How We Work</a>
+          <a href="#contact" class="nav-cta" data-i18n="nav_contact">Contact</a>
+          <span class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang-btn="en">EN</button><button type="button" data-lang-btn="zh">中文</button>
+          </span>
         </nav>
       </div>
     </header>
@@ -130,40 +131,40 @@
     <main id="top">
       <section class="hero">
         <div class="wrap">
-          <p class="kicker">StarLeap Tech LLC · Colorado, USA</p>
-          <h1>Software, cloud and AI tools — built lean, <em>shipped for real</em>.</h1>
-          <p class="sub">We are a small Colorado technology company. We build custom software and cloud &amp; AI tools for businesses, and we run our own public products — every one of them live, maintained and updated in the open.</p>
+          <p class="kicker" data-i18n="hero_kicker">StarLeap Tech LLC · Colorado, USA</p>
+          <h1 data-i18n="hero_h1">Software, cloud and AI tools — built lean, <em>shipped for real</em>.</h1>
+          <p class="sub" data-i18n="hero_sub">We are a small Colorado technology company. We build custom software and cloud &amp; AI tools for businesses, and we run our own public products — every one of them live, maintained and updated in the open.</p>
           <div class="hero-ctas">
-            <a class="btn" href="#contact">Start a project</a>
-            <a class="btn ghost" href="#products">See our live products</a>
+            <a class="btn" href="#contact" data-i18n="hero_cta1">Start a project</a>
+            <a class="btn ghost" href="#products" data-i18n="hero_cta2">See our live products</a>
           </div>
           <div class="hero-stats">
-            <div class="hero-stat"><b>Est. 2026</b><span>Registered in Colorado, USA</span></div>
-            <div class="hero-stat"><b>2 live products</b><span>Updated daily &amp; every 4 hours</span></div>
-            <div class="hero-stat"><b>Online-first</b><span>Remote team, worldwide clients</span></div>
+            <div class="hero-stat"><b data-i18n="stat1_b">Est. 2026</b><span data-i18n="stat1_s">Registered in Colorado, USA</span></div>
+            <div class="hero-stat"><b data-i18n="stat2_b">2 live products</b><span data-i18n="stat2_s">Updated daily &amp; every 4 hours</span></div>
+            <div class="hero-stat"><b data-i18n="stat3_b">Online-first</b><span data-i18n="stat3_s">Remote team, worldwide clients</span></div>
           </div>
         </div>
       </section>
 
       <section class="section" id="products">
         <div class="wrap">
-          <p class="eyebrow">Our Products</p>
-          <h2>Products we build and run ourselves</h2>
-          <p class="lede">The best proof of how we work is what we ship. Both products below are free to use, run on our own stack, and are updated on a fixed schedule.</p>
+          <p class="eyebrow" data-i18n="prod_eyebrow">Our Products</p>
+          <h2 data-i18n="prod_h2">Products we build and run ourselves</h2>
+          <p class="lede" data-i18n="prod_lede">The best proof of how we work is what we ship. Both products below are free to use, run on our own stack, and are updated on a fixed schedule.</p>
           <div class="grid">
             <article class="card product-card">
-              <span class="chip">Live product</span>
-              <h3>Global Deal Hunter</h3>
-              <p class="value">170 offers · $265,725+ tracked</p>
-              <p>A global deal-intelligence board: verified free cloud credits, AI tool trials, startup programs, bank and crypto bonuses. Every entry is checked against the official source before it is marked verified, and the board is re-swept every 4 hours. <span class="note">(Figures as of Nov 13, 2026 — see the live board for the latest.)</span></p>
-              <a class="btn" href="/deals.html">Open the board</a>
+              <span class="chip" data-i18n="p1_chip">Live product</span>
+              <h3 data-i18n="p1_title">Global Deal Hunter</h3>
+              <p class="value" data-i18n="p1_value">170 offers · $265,725+ tracked</p>
+              <p data-i18n="p1_body">A global deal-intelligence board: verified free cloud credits, AI tool trials, startup programs, bank and crypto bonuses. Every entry is checked against the official source before it is marked verified, and the board is re-swept every 4 hours. (Figures as of Nov 13, 2026 — see the live board for the latest.)</p>
+              <a class="btn" href="/deals.html" data-i18n="p1_btn">Open the board</a>
             </article>
             <article class="card product-card">
-              <span class="chip">Daily briefing</span>
-              <h3>每日科技讯息 · Daily Tech Briefing</h3>
-              <p class="value">New edition every morning</p>
-              <p>Our daily digest of global technology news — AI, chips, cloud infrastructure and tech capital — written in Chinese, every story linked to its original source. A new edition is published every morning.</p>
-              <a class="btn" href="/tech.html">Read today's edition</a>
+              <span class="chip" data-i18n="p2_chip">Daily briefing</span>
+              <h3 data-i18n="p2_title">每日科技讯息 · Daily Tech Briefing</h3>
+              <p class="value" data-i18n="p2_value">New edition every morning</p>
+              <p data-i18n="p2_body">Our daily digest of global technology news — AI, chips, cloud infrastructure and tech capital — every story linked to its original source, published in Chinese and English. A new edition goes out every morning.</p>
+              <a class="btn" href="/tech.html" data-i18n="p2_btn">Read today's edition</a>
             </article>
           </div>
         </div>
@@ -171,29 +172,29 @@
 
       <section class="section alt" id="services">
         <div class="wrap">
-          <p class="eyebrow">Services</p>
-          <h2>What we build and support</h2>
-          <p class="lede">Focused services, senior-level execution, no hand-offs to juniors. If it runs in a browser or in the cloud, we can probably build it — ask us.</p>
+          <p class="eyebrow" data-i18n="svc_eyebrow">Services</p>
+          <h2 data-i18n="svc_h2">What we build and support</h2>
+          <p class="lede" data-i18n="svc_lede">Focused services, senior-level execution, no hand-offs to juniors. If it runs in a browser or in the cloud, we can probably build it — ask us.</p>
           <div class="grid">
             <article class="card">
               <span class="svc-num">01</span>
-              <h3>Custom Software</h3>
-              <p>Web applications, internal tools and automation tailored to how your business actually runs — scoped tightly, built in iterations, documented so you are never locked in.</p>
+              <h3 data-i18n="s1_title">Custom Software</h3>
+              <p data-i18n="s1_body">Web applications, internal tools and automation tailored to how your business actually runs — scoped tightly, built in iterations, documented so you are never locked in.</p>
             </article>
             <article class="card">
               <span class="svc-num">02</span>
-              <h3>Cloud &amp; AI Tools</h3>
-              <p>Cloud architecture on the major platforms, AI integrations, data pipelines and monitoring. We design for cost first: the cheapest architecture that reliably does the job.</p>
+              <h3 data-i18n="s2_title">Cloud &amp; AI Tools</h3>
+              <p data-i18n="s2_body">Cloud architecture on the major platforms, AI integrations, data pipelines and monitoring. We design for cost first: the cheapest architecture that reliably does the job.</p>
             </article>
             <article class="card">
               <span class="svc-num">03</span>
-              <h3>Digital Products</h3>
-              <p>Content and information products, subscription boards and niche tools — from first prototype to a product that updates itself on schedule, like the ones above.</p>
+              <h3 data-i18n="s3_title">Digital Products</h3>
+              <p data-i18n="s3_body">Content and information products, subscription boards and niche tools — from first prototype to a product that updates itself on schedule, like the ones above.</p>
             </article>
             <article class="card">
               <span class="svc-num">04</span>
-              <h3>Technical Support</h3>
-              <p>Ongoing maintenance, fixes and small improvements for software we built — and honest assessments of software we didn't. Clear pricing, in writing, before work starts.</p>
+              <h3 data-i18n="s4_title">Technical Support</h3>
+              <p data-i18n="s4_body">Ongoing maintenance, fixes and small improvements for software we built — and honest assessments of software we didn't. Clear pricing, in writing, before work starts.</p>
             </article>
           </div>
         </div>
@@ -201,44 +202,44 @@
 
       <section class="section" id="about">
         <div class="wrap">
-          <p class="eyebrow">About</p>
-          <h2>A small technology company, built for the way business runs today</h2>
-          <p class="lede">StarLeap Tech LLC is a Colorado limited liability company formed in April 2026. We work online-first with clients and partners worldwide, and we hold ourselves to a simple standard: ship real things, keep them running, and say plainly what they cost. Our own products — a deal-intelligence board and a daily tech briefing — run on the same stack and discipline we offer to clients.</p>
+          <p class="eyebrow" data-i18n="about_eyebrow">About</p>
+          <h2 data-i18n="about_h2">A small technology company, built for the way business runs today</h2>
+          <p class="lede" data-i18n="about_lede">StarLeap Tech LLC is a Colorado limited liability company formed in April 2026. We work online-first with clients and partners worldwide, and we hold ourselves to a simple standard: ship real things, keep them running, and say plainly what they cost. Our own products — a deal-intelligence board and a daily tech briefing — run on the same stack and discipline we offer to clients.</p>
           <div class="facts">
-            <div class="fact"><span>Company</span><b>StarLeap Tech LLC</b></div>
-            <div class="fact"><span>Registered</span><b>Colorado, USA · April 2026</b></div>
-            <div class="fact"><span>Office</span><b>131 Railroad St, Pritchett, CO 81064</b></div>
-            <div class="fact"><span>Focus</span><b>Software · Cloud &amp; AI · Digital products</b></div>
+            <div class="fact"><span data-i18n="f1_k">Company</span><b>StarLeap Tech LLC</b></div>
+            <div class="fact"><span data-i18n="f2_k">Registered</span><b data-i18n="f2_v">Colorado, USA · April 2026</b></div>
+            <div class="fact"><span data-i18n="f3_k">Office</span><b>131 Railroad St, Pritchett, CO 81064</b></div>
+            <div class="fact"><span data-i18n="f4_k">Focus</span><b data-i18n="f4_v">Software · Cloud &amp; AI · Digital products</b></div>
           </div>
         </div>
       </section>
 
       <section class="section alt" id="process">
         <div class="wrap">
-          <p class="eyebrow">How We Work</p>
-          <h2>A straightforward process, from idea to ongoing support</h2>
+          <p class="eyebrow" data-i18n="proc_eyebrow">How We Work</p>
+          <h2 data-i18n="proc_h2">A straightforward process, from idea to ongoing support</h2>
           <div class="steps">
-            <div class="step"><b>1 · Scope</b><p>You tell us what you need. We reply with a written scope, a fixed price or a clear rate, and a timeline — before any work starts.</p></div>
-            <div class="step"><b>2 · Build</b><p>We build in short iterations and show progress as we go, so there are no surprises at the end.</p></div>
-            <div class="step"><b>3 · Launch</b><p>We deploy, verify everything live, and hand over documentation and access. Nothing is "done" until you can open it yourself.</p></div>
-            <div class="step"><b>4 · Support</b><p>We stay available for fixes, updates and the next iteration — on terms agreed up front.</p></div>
+            <div class="step"><b data-i18n="st1_b">1 · Scope</b><p data-i18n="st1_p">You tell us what you need. We reply with a written scope, a fixed price or a clear rate, and a timeline — before any work starts.</p></div>
+            <div class="step"><b data-i18n="st2_b">2 · Build</b><p data-i18n="st2_p">We build in short iterations and show progress as we go, so there are no surprises at the end.</p></div>
+            <div class="step"><b data-i18n="st3_b">3 · Launch</b><p data-i18n="st3_p">We deploy, verify everything live, and hand over documentation and access. Nothing is "done" until you can open it yourself.</p></div>
+            <div class="step"><b data-i18n="st4_b">4 · Support</b><p data-i18n="st4_p">We stay available for fixes, updates and the next iteration — on terms agreed up front.</p></div>
           </div>
         </div>
       </section>
 
       <section class="section" id="contact">
         <div class="wrap">
-          <p class="eyebrow">Contact</p>
-          <h2>Talk to us about your project</h2>
-          <p class="lede">Tell us what you are trying to build or fix. Business inquiries: please include your company name, a short description of what you need, and your preferred timeline.</p>
+          <p class="eyebrow" data-i18n="ct_eyebrow">Contact</p>
+          <h2 data-i18n="ct_h2">Talk to us about your project</h2>
+          <p class="lede" data-i18n="ct_lede">Tell us what you are trying to build or fix. Business inquiries: please include your company name, a short description of what you need, and your preferred timeline.</p>
           <div class="contact-grid">
             <div class="contact-lines">
-              <p><b>Email</b><br><a href="mailto:moniqueibrahima940@gmail.com">moniqueibrahima940@gmail.com</a></p>
-              <p><b>Phone / WhatsApp</b><br><a href="tel:+12082107415">+1 (208) 210-7415</a> · <a href="https://wa.me/12082107415" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
-              <p><b>Address</b><br>StarLeap Tech LLC<br>131 Railroad St, Pritchett, CO 81064, USA</p>
-              <p class="note">We read every inquiry ourselves. If your message is about one of our products, mention which one — it helps us route it faster.</p>
+              <p><b data-i18n="c_email">Email</b><br><a href="mailto:moniqueibrahima940@gmail.com">moniqueibrahima940@gmail.com</a></p>
+              <p><b data-i18n="c_phone">Phone / WhatsApp</b><br><a href="tel:+12082107415">+1 (208) 210-7415</a> · <a href="https://wa.me/12082107415" target="_blank" rel="noopener" data-i18n="c_wa">Chat on WhatsApp</a></p>
+              <p><b data-i18n="c_addr">Address</b><br>StarLeap Tech LLC<br>131 Railroad St, Pritchett, CO 81064, USA</p>
+              <p class="note" data-i18n="c_note">We read every inquiry ourselves. If your message is about one of our products, mention which one — it helps us route it faster.</p>
             </div>
-            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="6b6eba7f-71c0-428f-9d7f-10eba1dee89a"><input type="hidden" name="subject" value="New inquiry from starleaptech.dpdns.org"><input type="checkbox" name="botcheck" style="display:none"><label>Your name<input type="text" name="name" required></label><label>Your email<input type="email" name="email" required></label><label>Company<input type="text" name="company"></label><label>How can we help?<textarea name="message" rows="5" required></textarea></label><button type="submit">Send Inquiry</button></form>
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="6b6eba7f-71c0-428f-9d7f-10eba1dee89a"><input type="hidden" name="subject" value="New inquiry from starleaptech.dpdns.org"><input type="checkbox" name="botcheck" style="display:none"><label><span data-i18n="fm_name">Your name</span><input type="text" name="name" required></label><label><span data-i18n="fm_email">Your email</span><input type="email" name="email" required></label><label><span data-i18n="fm_company">Company</span><input type="text" name="company"></label><label><span data-i18n="fm_msg">How can we help?</span><textarea name="message" rows="5" required></textarea></label><button type="submit" data-i18n="fm_btn">Send Inquiry</button></form>
           </div>
         </div>
       </section>
@@ -246,17 +247,128 @@
 
     <footer>
       <div class="wrap">
-        <span>© 2026 StarLeap Tech LLC · Pritchett, Colorado, USA</span>
+        <span data-i18n="ft_copy">© 2026 StarLeap Tech LLC · Pritchett, Colorado, USA</span>
         <nav>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#products">Products</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="#products" data-i18n="nav_products">Products</a>
           <a href="/deals.html">Global Deal Hunter</a>
           <a href="/tech.html">每日科技讯息</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
         </nav>
       </div>
     </footer>
+
+    <script>
+      var I18N = {
+        en: {
+          title: "StarLeap Tech LLC — Software, Cloud & AI Tools",
+          nav_about: "About", nav_services: "Services", nav_products: "Products", nav_process: "How We Work", nav_contact: "Contact",
+          hero_kicker: "StarLeap Tech LLC · Colorado, USA",
+          hero_h1: "Software, cloud and AI tools — built lean, <em>shipped for real</em>.",
+          hero_sub: "We are a small Colorado technology company. We build custom software and cloud & AI tools for businesses, and we run our own public products — every one of them live, maintained and updated in the open.",
+          hero_cta1: "Start a project", hero_cta2: "See our live products",
+          stat1_b: "Est. 2026", stat1_s: "Registered in Colorado, USA",
+          stat2_b: "2 live products", stat2_s: "Updated daily & every 4 hours",
+          stat3_b: "Online-first", stat3_s: "Remote team, worldwide clients",
+          prod_eyebrow: "Our Products", prod_h2: "Products we build and run ourselves",
+          prod_lede: "The best proof of how we work is what we ship. Both products below are free to use, run on our own stack, and are updated on a fixed schedule.",
+          p1_chip: "Live product", p1_title: "Global Deal Hunter",
+          p1_value: "170 offers · $265,725+ tracked",
+          p1_body: "A global deal-intelligence board: verified free cloud credits, AI tool trials, startup programs, bank and crypto bonuses. Every entry is checked against the official source before it is marked verified, and the board is re-swept every 4 hours. (Figures as of Nov 13, 2026 — see the live board for the latest.)",
+          p1_btn: "Open the board",
+          p2_chip: "Daily briefing", p2_title: "每日科技讯息 · Daily Tech Briefing",
+          p2_value: "New edition every morning",
+          p2_body: "Our daily digest of global technology news — AI, chips, cloud infrastructure and tech capital — every story linked to its original source, published in Chinese and English. A new edition goes out every morning.",
+          p2_btn: "Read today's edition",
+          svc_eyebrow: "Services", svc_h2: "What we build and support",
+          svc_lede: "Focused services, senior-level execution, no hand-offs to juniors. If it runs in a browser or in the cloud, we can probably build it — ask us.",
+          s1_title: "Custom Software", s1_body: "Web applications, internal tools and automation tailored to how your business actually runs — scoped tightly, built in iterations, documented so you are never locked in.",
+          s2_title: "Cloud & AI Tools", s2_body: "Cloud architecture on the major platforms, AI integrations, data pipelines and monitoring. We design for cost first: the cheapest architecture that reliably does the job.",
+          s3_title: "Digital Products", s3_body: "Content and information products, subscription boards and niche tools — from first prototype to a product that updates itself on schedule, like the ones above.",
+          s4_title: "Technical Support", s4_body: "Ongoing maintenance, fixes and small improvements for software we built — and honest assessments of software we didn't. Clear pricing, in writing, before work starts.",
+          about_eyebrow: "About", about_h2: "A small technology company, built for the way business runs today",
+          about_lede: "StarLeap Tech LLC is a Colorado limited liability company formed in April 2026. We work online-first with clients and partners worldwide, and we hold ourselves to a simple standard: ship real things, keep them running, and say plainly what they cost. Our own products — a deal-intelligence board and a daily tech briefing — run on the same stack and discipline we offer to clients.",
+          f1_k: "Company", f2_k: "Registered", f2_v: "Colorado, USA · April 2026", f3_k: "Office", f4_k: "Focus", f4_v: "Software · Cloud & AI · Digital products",
+          proc_eyebrow: "How We Work", proc_h2: "A straightforward process, from idea to ongoing support",
+          st1_b: "1 · Scope", st1_p: "You tell us what you need. We reply with a written scope, a fixed price or a clear rate, and a timeline — before any work starts.",
+          st2_b: "2 · Build", st2_p: "We build in short iterations and show progress as we go, so there are no surprises at the end.",
+          st3_b: "3 · Launch", st3_p: "We deploy, verify everything live, and hand over documentation and access. Nothing is \"done\" until you can open it yourself.",
+          st4_b: "4 · Support", st4_p: "We stay available for fixes, updates and the next iteration — on terms agreed up front.",
+          ct_eyebrow: "Contact", ct_h2: "Talk to us about your project",
+          ct_lede: "Tell us what you are trying to build or fix. Business inquiries: please include your company name, a short description of what you need, and your preferred timeline.",
+          c_email: "Email", c_phone: "Phone / WhatsApp", c_wa: "Chat on WhatsApp", c_addr: "Address",
+          c_note: "We read every inquiry ourselves. If your message is about one of our products, mention which one — it helps us route it faster.",
+          fm_name: "Your name", fm_email: "Your email", fm_company: "Company", fm_msg: "How can we help?", fm_btn: "Send Inquiry",
+          ft_copy: "© 2026 StarLeap Tech LLC · Pritchett, Colorado, USA"
+        },
+        zh: {
+          title: "StarLeap Tech LLC — 软件、云与 AI 工具",
+          nav_about: "关于", nav_services: "服务", nav_products: "产品", nav_process: "合作方式", nav_contact: "联系我们",
+          hero_kicker: "StarLeap Tech LLC · 美国科罗拉多",
+          hero_h1: "软件、云与 AI 工具 —— 小而精，<em>真交付</em>。",
+          hero_sub: "我们是一家科罗拉多的小型科技公司，为企业定制软件与云端 AI 工具，也运营自己的公开产品 —— 每一个都真实在线、持续维护、公开更新。",
+          hero_cta1: "发起一个项目", hero_cta2: "看看我们的产品",
+          stat1_b: "成立于 2026", stat1_s: "美国科罗拉多州注册",
+          stat2_b: "2 个产品在线运行", stat2_s: "每日 / 每 4 小时更新",
+          stat3_b: "远程优先", stat3_s: "远程团队，客户遍布全球",
+          prod_eyebrow: "我们的产品", prod_h2: "我们自己开发并运营的产品",
+          prod_lede: "检验我们做事方式的最好证据，就是我们交付的东西。下面两个产品都免费使用，跑在我们自己的技术栈上，按固定节奏更新。",
+          p1_chip: "在线产品", p1_title: "Global Deal Hunter · 全球羊毛情报",
+          p1_value: "170 条在榜 · 已追踪 $265,725+",
+          p1_body: "全球羊毛情报看板：已核实的免费云额度、AI 工具试用、创业公司计划、银行与加密货币奖励。每条在标「已验证」前都会回官方来源核对，看板每 4 小时自动巡检一遍。（数字截至 2026 年 11 月 13 日 —— 最新数据看实时看板。）",
+          p1_btn: "打开看板",
+          p2_chip: "每日简报", p2_title: "每日科技讯息 · Daily Tech Briefing",
+          p2_value: "每天早晨出新一期",
+          p2_body: "我们每天整理的全球科技新闻 —— AI、芯片、云基础设施与科技资本，每条都链接到原文出处，中英文双语发布。每天早晨更新一期。",
+          p2_btn: "读今天这期",
+          svc_eyebrow: "服务", svc_h2: "我们开发与支持什么",
+          svc_lede: "聚焦的服务、资深级的执行、不转手给新手。只要是跑在浏览器或云上的东西，我们大概率能做 —— 先问问我们。",
+          s1_title: "定制软件", s1_body: "网页应用、内部工具与自动化，按你业务真实的运转方式来做 —— 范围收紧、分步迭代、文档齐全，你永远不会被供应商锁死。",
+          s2_title: "云与 AI 工具", s2_body: "主流云平台架构、AI 集成、数据管道与监控。先算成本再设计：用最便宜的架构，可靠地把事情办成。",
+          s3_title: "数字产品", s3_body: "内容与信息产品、订阅看板与小众工具 —— 从第一个原型，到能按计划自我更新的产品，就像上面那两个。",
+          s4_title: "技术支持", s4_body: "为我们开发的软件提供持续维护、修复与小步改进；不是我们做的软件，也给诚实的评估。价格在开工前书面说清。",
+          about_eyebrow: "关于", about_h2: "一家为今天的做生意方式而生的小科技公司",
+          about_lede: "StarLeap Tech LLC 是 2026 年 4 月在科罗拉多成立的有限责任公司。我们远程优先，与全球客户和伙伴合作，标准只有一条：做真实的东西、让它持续跑着、把价格说在明处。我们自己的产品 —— 羊毛情报看板和每日科技简报 —— 跑在与给客户用的同一套技术栈和纪律上。",
+          f1_k: "公司", f2_k: "注册", f2_v: "美国科罗拉多 · 2026 年 4 月", f3_k: "地址", f4_k: "方向", f4_v: "软件 · 云与 AI · 数字产品",
+          proc_eyebrow: "合作方式", proc_h2: "从想法到长期支持，一条直线",
+          st1_b: "1 · 定范围", st1_p: "你告诉我们需要什么。开工之前，我们书面回复范围、固定价格或清晰费率，以及时间表。",
+          st2_b: "2 · 开发", st2_p: "我们小步迭代，边做边给你看进展，最后不会有意外。",
+          st3_b: "3 · 上线", st3_p: "我们部署、上线实测、移交文档与权限。你自己能打开，才算真正完成。",
+          st4_b: "4 · 支持", st4_p: "我们继续负责修复、更新和下一版 —— 条件事先说好。",
+          ct_eyebrow: "联系", ct_h2: "跟我们聊聊你的项目",
+          ct_lede: "告诉我们你想做什么、或想修什么。商务咨询请附上公司名、需求简述和期望的时间表。",
+          c_email: "邮箱", c_phone: "电话 / WhatsApp", c_wa: "用 WhatsApp 联系", c_addr: "地址",
+          c_note: "每封咨询我们都亲自看。如果是关于某个产品的事，注明是哪个产品，能帮我们更快分流。",
+          fm_name: "你的名字", fm_email: "你的邮箱", fm_company: "公司", fm_msg: "需要我们帮什么？", fm_btn: "发送咨询",
+          ft_copy: "© 2026 StarLeap Tech LLC · 美国科罗拉多 Pritchett"
+        }
+      };
+      function applyLang(lang) {
+        var dict = I18N[lang] || I18N.en;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        if (dict.title) document.title = dict.title;
+        var nodes = document.querySelectorAll("[data-i18n]");
+        for (var i = 0; i < nodes.length; i++) {
+          var key = nodes[i].getAttribute("data-i18n");
+          if (dict[key] !== undefined) nodes[i].innerHTML = dict[key];
+        }
+        var btns = document.querySelectorAll("[data-lang-btn]");
+        for (var j = 0; j < btns.length; j++) {
+          btns[j].classList.toggle("active", btns[j].getAttribute("data-lang-btn") === lang);
+        }
+        try { localStorage.setItem("sl-lang", lang); } catch (e) {}
+      }
+      (function () {
+        var saved = "en";
+        try { saved = localStorage.getItem("sl-lang") || "en"; } catch (e) {}
+        applyLang(saved === "zh" ? "zh" : "en");
+        var btns = document.querySelectorAll("[data-lang-btn]");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
+        }
+      })();
+    </script>
   <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0a9ebcafa076437491f7f2c7c717a05d"}'></script><!-- End Cloudflare Web Analytics -->
   </body>
 </html>
