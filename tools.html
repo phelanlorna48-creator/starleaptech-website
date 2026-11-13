@@ -109,11 +109,11 @@ td.name{font-weight:700;white-space:nowrap}
   <div class="wrap">
     <p class="kicker" data-i18n="hero_kicker">STARLEAP 实测精选</p>
     <h1 data-i18n="hero_title">AI 工具精选榜</h1>
-    <p data-i18n="hero_lede">导航站都在搬运清单，我们只收自己生产环境里真在用的。每款工具给实测评分、价格档和免费版信息；页面下半部分是「创新工坊」，公开我们把工具拼成生产线的配方和量化产出。</p>
+    <p data-i18n="hero_lede">导航站都在搬运清单，我们只收自己生产环境里真在用的。每款工具给实测评分、价格档和免费版信息；页面下半部分是「创新雷达」，盯 GitHub 上星标暴涨的 AI Skill 和 X 上的 AI 热议。</p>
     <div class="stats">
       <span class="stat"><b>14</b> <span data-i18n="stat1">款在用工具</span></span>
       <span class="stat"><b>5</b> <span data-i18n="stat2">大类别</span></span>
-      <span class="stat"><b>3</b> <span data-i18n="stat3">条公开工作流配方</span></span>
+      <span class="stat"><b>6</b> <span data-i18n="stat3">个高星开源 Skill 在盯</span></span>
       <span class="stat"><b>6+</b> <span data-i18n="stat4">款有免费版可白嫖起步</span></span>
     </div>
   </div>
@@ -202,44 +202,55 @@ td.name{font-weight:700;white-space:nowrap}
 
   <section class="section">
     <p class="eyebrow" data-i18n="lab_eyebrow">创新板块</p>
-    <h2 data-i18n="lab_title">创新工坊：工具不值钱，配方值钱</h2>
+    <h2 data-i18n="lab_title">创新雷达：GitHub 高星 Skill 与 X 热榜</h2>
     <div class="lab">
-      <h2 data-i18n="lab_h">我们的三条公开配方</h2>
-      <p class="lede" data-i18n="lab_lede">单个工具谁都能买，把工具拼成带质检的流水线，才是拉开差距的地方。下面三条是我们每天在跑的生产配方，链路和产出数据全部公开。</p>
+      <h2 data-i18n="lab_h">创新雷达：GitHub 高星 AI Skill × X 热榜</h2>
+      <p class="lede" data-i18n="lab_lede">创新不在新闻稿里，在开源仓库和时间线上。这个板块盯两件事：GitHub 上星标暴涨的 AI Skill 项目，和 X 上正在被热议的 AI 动态。星数取 2026 年 11 月上旬的公开口径，变动很快，看个趋势。</p>
 
       <div class="recipe">
-        <h3 data-i18n="r1_t">配方一：AI 广告片流水线</h3>
-        <p class="flow" data-i18n="r1_f">脚本 → Seedance 分镜生成 → ElevenLabs / Piper 配音 → 逐帧质检（每镜早中晚 3 帧）→ 静音检测 → 成片</p>
-        <p data-i18n="r1_d">关键不在生成，在质检：每条片子交付前逐镜抽帧验穿帮、全片跑静音检测，旁白必须贯穿全程。这是我们被返工教训换来的标准动作。</p>
-        <div class="nums">
-          <span class="num"><b>30+</b> <span data-i18n="r1_n1">条已交付广告片</span></span>
-          <span class="num"><b>3</b> <span data-i18n="r1_n2">种语言交付（英 / 土 / 中）</span></span>
-          <span class="num"><b>100%</b> <span data-i18n="r1_n3">交付前质检覆盖</span></span>
-        </div>
+        <h3>obra/superpowers <span style="color:#7fd8c6">★ 315K</span></h3>
+        <p data-i18n="ghd1">把软件开发方法论打包成技能：先计划、再测试驱动、最后审查，让编程智能体像资深工程师一样干活。目前 GitHub 上星数最高的 Skill 框架。</p>
+        <p class="flow"><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/obra/superpowers ↗</a></p>
       </div>
 
       <div class="recipe">
-        <h3 data-i18n="r2_t">配方二：真人口播对口型流水线</h3>
-        <p class="flow" data-i18n="r2_f">真人照片 → TTS 配音 → Wav2Lip 分段对口型（约 12 秒一段）→ concat 拼接 → 字幕烧录 → PTS 连续性校验</p>
-        <p data-i18n="r2_d">长视频整片渲染会爆内存，分段才是正解；拼接必须用滤镜重拼并逐帧验时间戳，否则画面会冻住错位。</p>
-        <div class="nums">
-          <span class="num"><b>12s</b> <span data-i18n="r2_n1">每段渲染长度</span></span>
-          <span class="num"><b>4</b> <span data-i18n="r2_n2">条口播成片已交付</span></span>
-          <span class="num"><b>53–68s</b> <span data-i18n="r2_n3">单条成片时长</span></span>
-        </div>
+        <h3>affaan-m/ECC <span style="color:#7fd8c6">★ 300K</span></h3>
+        <p data-i18n="ghd2">智能体「外挂系统」：给编程智能体加持久上下文和性能优化，装一次就不用每次重写提示词。Everything Claude Code 的核心仓库。</p>
+        <p class="flow"><a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/affaan-m/ECC ↗</a></p>
       </div>
 
       <div class="recipe">
-        <h3 data-i18n="r3_t">配方三：内容情报双流水线</h3>
-        <p class="flow" data-i18n="r3_f">定时巡检（每 4 小时）→ 官方域名核实 → 分级入库 → 双语发布；每日科技简讯：真实新闻源 → 逐条标来源 → 中英双版上线</p>
-        <p data-i18n="r3_d">羊毛情报和科技简讯共用一套「先核实、再发布」的骨架：新收录先标待核实，只有官方链接能升已验证。内容产品的信任就是这样攒的。</p>
-        <div class="nums">
-          <span class="num"><b>178+</b> <span data-i18n="r3_n1">条在榜情报</span></span>
-          <span class="num"><b>$341,582+</b> <span data-i18n="r3_n2">已核实总价值</span></span>
-          <span class="num"><b>4h</b> <span data-i18n="r3_n3">巡检间隔</span></span>
-        </div>
+        <h3>mattpocock/skills <span style="color:#7fd8c6">★ 291K</span></h3>
+        <p data-i18n="ghd3">小而美的组合式技能集：每个技能只解决一个编程智能体的常见毛病，像乐高一样拼着用，证明了 Skill 不一定要大而全。</p>
+        <p class="flow"><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/mattpocock/skills ↗</a></p>
+      </div>
+
+      <div class="recipe">
+        <h3>anthropics/skills <span style="color:#7fd8c6">★ 192K</span></h3>
+        <p data-i18n="ghd4">Anthropic 官方技能库，Agent Skills 标准的参考实现。Claude 做 Word、Excel、PPT、PDF 的文档技能本体就在这里，最近一周涨星 2.2 万，登上 GitHub 日榜第一。</p>
+        <p class="flow"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/anthropics/skills ↗</a></p>
+      </div>
+
+      <div class="recipe">
+        <h3>addyosmani/agent-skills <span style="color:#7fd8c6">★ 115K</span></h3>
+        <p data-i18n="ghd5">Google Chrome 工程师 Addy Osmani 出品的生产级工程技能：代码检查、类型校验、测试、重构，提交前先自动验证一遍。</p>
+        <p class="flow"><a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/addyosmani/agent-skills ↗</a></p>
+      </div>
+
+      <div class="recipe">
+        <h3>MadsLorentzen/ai-job-search <span style="color:#7fd8c6">★ 61.6K</span></h3>
+        <p data-i18n="ghd6">把求职全流程做成技能框架：建档、搜岗打分、定制简历和求职信、面试准备。作者用它投了 69 份申请、拿到 20 次面试。我们 StarLeap 正在用，就是今天刚装上的那一套。</p>
+        <p class="flow"><a href="https://github.com/MadsLorentzen/ai-job-search" target="_blank" rel="noopener" style="color:#7fd8c6">github.com/MadsLorentzen/ai-job-search ↗</a></p>
+      </div>
+
+      <div class="recipe">
+        <h3 data-i18n="lab_x">X 上正在热议的三件 AI 事</h3>
+        <p data-i18n="xd1"><b style="color:#fff">Gemini 4 Hydrogen 发布</b>：更快更便宜、专为编程和智能体优化，模型价格战继续，小团队的 AI 成本又降一档。</p>
+        <p data-i18n="xd2"><b style="color:#fff">AI 购物助手被曝推荐可疑店铺</b>：测试里 Perplexity 的回答 15% 带出问题店铺。消费者开始问 AI「去哪买」，跨境卖家的店铺口碑正在变成新的流量入口。</p>
+        <p data-i18n="xd3"><b style="color:#fff">SpaceX 砸 740 亿美元建 AI 算力园区</b>：德州和亚利桑那两座超级计算园区，巨头在拼基建，应用层反而更缺人。</p>
       </div>
     </div>
+
   </section>
 
   <section class="cta">
@@ -260,8 +271,8 @@ td.name{font-weight:700;white-space:nowrap}
 var I18N = { en: {
 nav_home: "Home", nav_tech: "Daily Tech Briefing", nav_deals: "Global Deal Hunter", nav_guide: "Global Launch Checklist", nav_tools: "AI Tools Picks", nav_contact: "Contact",
 hero_kicker: "TESTED IN PRODUCTION BY STARLEAP", hero_title: "AI Tools We Actually Use",
-hero_lede: "Directory sites copy each other's lists. We only list tools running in our own production environment, each with a hands-on score, a price tier, and free-plan status. The lower half is the Innovation Lab: the workflow recipes that turn tools into production lines, with the output numbers to prove it.",
-stat1: "tools in active use", stat2: "categories", stat3: "public workflow recipes", stat4: "with a free tier to start",
+hero_lede: "Directory sites copy each other's lists. We only list tools running in our own production environment, each with a hands-on score, a price tier, and free-plan status. The lower half is the Innovation Radar: the fastest-rising AI skill projects on GitHub and the AI stories heating up on X.",
+stat1: "tools in active use", stat2: "categories", stat3: "starred open-source skills tracked", stat4: "with a free tier to start",
 t_eyebrow: "THE SCOREBOARD", t_title: "One table: scores, prices, free plans",
 t_lede: "Scores are our hands-on rating across quality, speed, value, and learning curve (10 max). Prices are approximate paid entry points; check each vendor's site before subscribing (November 2026).",
 th_tool: "Tool", th_cat: "Category", th_score: "Score", th_best: "Best for", th_price: "Paid from", th_free: "Free plan",
@@ -278,9 +289,19 @@ v_el: "The ceiling for English voice-over; pacing and emotion closest to a real 
 v_w2l: "Word-accurate lip-sync for real-person talking heads. Open source and self-hosted; render long videos in segments. That detail cost us real rework to learn.",
 v_claude: "The hub of our writing, scripting, and agent pipelines. The steadiest long-form writer, and it does not drift on long tasks. Our content production lines are built around it.",
 v_ds: "The value king. Repetitive, high-volume small jobs go to its API at near-negligible cost, saving the budget for the expensive models on hard problems.",
-lab_eyebrow: "INNOVATION", lab_title: "Innovation Lab: tools are cheap, recipes are not",
-lab_h: "Three recipes we run every day",
-lab_lede: "Anyone can buy a single tool. The gap comes from chaining tools into a quality-controlled pipeline. These three run in our production today, with the full chain and output numbers public.",
+lab_eyebrow: "INNOVATION", lab_title: "Innovation Radar: GitHub's starred AI skills and X's hot topics",
+lab_h: "Innovation Radar: GitHub AI Skills × the X Hot List",
+lab_lede: "Innovation does not live in press releases; it lives in open-source repos and on the timeline. This section tracks two things: AI skill projects whose GitHub stars are exploding, and the AI stories being debated on X. Star counts are public figures from early November 2026 and move fast; read them as a trend.",
+ghd1: "Software-development methodology packaged as skills: plan first, test-driven development, then review, so a coding agent works like a senior engineer. Currently the most-starred skill framework on GitHub.",
+ghd2: "An agent harness system: persistent context and performance optimization for coding agents, set up once instead of rewriting prompts every session. The core repo behind Everything Claude Code.",
+ghd3: "Small, composable skills: each one fixes a single common coding-agent failure mode, Lego-style. Proof that a skill does not have to be big to be valuable.",
+ghd4: "Anthropic's official skills library and the reference implementation of the Agent Skills standard. The document skills behind Claude's Word, Excel, PowerPoint, and PDF work live here; it gained 22K stars in a week and topped GitHub's daily trending chart.",
+ghd5: "Production-grade engineering skills by Google Chrome engineer Addy Osmani: linting, type checks, tests, and refactoring, with automated validation before anything is committed.",
+ghd6: "The whole job hunt as a skill framework: profiling, scored job search, tailored CVs and cover letters, interview prep. Its author ran 69 applications and 20 interviews with it. StarLeap runs it too; we installed it today.",
+lab_x: "Three AI stories heating up on X",
+xd1: "<b style=\"color:#fff\">Gemini 4 Hydrogen ships</b>: faster, cheaper, tuned for coding and agents. The model price war continues, and small teams' AI costs drop another notch.",
+xd2: "<b style=\"color:#fff\">AI shopping assistants caught recommending risky stores</b>: 15% of Perplexity answers in testing surfaced questionable storefronts. As shoppers start asking AI where to buy, a cross-border seller's store reputation is becoming a traffic source in its own right.",
+xd3: "<b style=\"color:#fff\">SpaceX commits $74B to AI compute campuses</b>: two supercomputing sites in Texas and Arizona. Giants are racing on infrastructure, which leaves the application layer short of people.",
 r1_t: "Recipe 1: The AI ad-film pipeline",
 r1_f: "Script → Seedance storyboard generation → ElevenLabs / Piper voice → frame-by-frame QC (3 frames per shot) → silence detection → final cut",
 r1_d: "The point is not generation, it is QC: every film is frame-checked for glitches and run through full-track silence detection before delivery, with narration running through the whole piece. Standards bought with real rework.",
