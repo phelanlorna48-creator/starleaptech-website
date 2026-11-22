@@ -236,6 +236,7 @@ cta_btn: "Contact us",
 foot_left: "© 2026 StarLeap Tech LLC · Colorado, USA", foot_right: "Built lean, shipped for real."
 } };
 function applyLang(lang) {
+  try { localStorage.setItem("sl-lang", lang); } catch (e) {}
   if (lang === "zh") { location.reload(); return; }
   var dict = I18N[lang]; if (!dict) return;
   document.documentElement.lang = "en";
@@ -246,7 +247,6 @@ function applyLang(lang) {
   document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
     b.classList.toggle("active", b.getAttribute("data-lang-btn") === lang);
   });
-  try { localStorage.setItem("sl-lang", lang); } catch (e) {}
 }
 document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
   b.addEventListener("click", function () { applyLang(this.getAttribute("data-lang-btn")); });
